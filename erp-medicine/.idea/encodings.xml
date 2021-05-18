@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/med-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/med-erp/erp-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/med-erp/erp-damain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/med-erp/erp-mapper/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/med-erp/erp-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/med-system/system-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/med-system/system-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/med-system/system-mapper/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/med-system/system-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/med-system/system-web/src/main/java" charset="UTF-8" />
+  </component>
+</project>
