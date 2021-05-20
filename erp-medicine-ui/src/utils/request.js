@@ -10,16 +10,14 @@ const service = axios.create({
   timeout: 5000 // request timeout
 })
 
-// request interceptor
+// 请求拦截
 service.interceptors.request.use(
   config => {
-    // do something before request is sent
+    // 在发送请求之前把 token 放到请求头中
 
     if (store.getters.token) {
-      // let each request carry token
-      // ['X-Token'] is a custom headers key
-      // please modify it according to the actual situation
-      config.headers['X-Token'] = getToken()
+      // 这里的 token 和后端的保持一样
+      config.headers['token'] = getToken()
     }
     return config
   },
@@ -30,7 +28,7 @@ service.interceptors.request.use(
   }
 )
 
-// response interceptor
+// 响应拦截
 service.interceptors.response.use(
   /**
    * If you want to get http information such as headers or status
@@ -43,31 +41,32 @@ service.interceptors.response.use(
    * You can also judge the status by HTTP Status Code
    */
   response => {
-    const res = response.data
+    const res = response.data// response.data 里面的数据才是后台返回给我们的数据 400 401 200 500
 
-    // if the custom code is not 20000, it is judged as an error.
-    if (res.code !== 20000) {
-      Message({
-        message: res.message || 'Error',
-        type: 'error',
-        duration: 5 * 1000
-      })
-
-      // 50008: Illegal token; 50012: Other clients logged in; 50014: Token expired;
-      if (res.code === 50008 || res.code === 50012 || res.code === 50014) {
-        // to re-login
-        MessageBox.confirm('You have been logged out, you can cancel to stay on this page, or log in again', 'Confirm logout', {
-          confirmButtonText: 'Re-Login',
-          cancelButtonText: 'Cancel',
-          type: 'warning'
-        }).then(() => {
-          store.dispatch('user/resetToken').then(() => {
-            location.reload()
-          })
+    if (res.code === 401) {
+      // 身份过期
+      MessageBox.confirm('用户登录身份已过期，请重新登录', '系统提示', {
+        confirmButtonText: '重新登录',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        store.dispatch('user/logout').then(() => {
+          // 跳转到登录页面 重新登录
+          location.reload()
         })
-      }
-      return Promise.reject(new Error(res.message || 'Error'))
+      })
+    } else if (res.code === 500) {
+      Notification.error({
+        title: '服务器内部出现异常，请联系管理员'
+      })
+      return Promise.reject('error')// 记录错
+    } else if (res.code !== 200) {
+      Notification.error({
+        title: res.msg
+      })
+      return Promise.reject('error')// 记录错
     } else {
+      // 以上验证通过之后再放行
       return res
     }
   },
