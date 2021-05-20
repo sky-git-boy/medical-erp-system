@@ -11,6 +11,8 @@
 
     <artifactId>med-system</artifactId>
     <packaging>pom</packaging>
+    <description>系统模块</description>
+
     <modules>
         <module>system-api</module>
         <module>system-domain</module>
@@ -19,5 +21,11 @@
         <module>system-web</module>
     </modules>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.sky</groupId>
+            <artifactId>med-commons</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

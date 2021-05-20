@@ -11,12 +11,20 @@
 
     <artifactId>med-erp</artifactId>
     <packaging>pom</packaging>
+    <description>ERP模块</description>
+
     <modules>
         <module>erp-api</module>
-        <module>erp-damain</module>
+        <module>erp-domain</module>
         <module>erp-mapper</module>
         <module>erp-service</module>
     </modules>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.sky</groupId>
+            <artifactId>med-commons</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

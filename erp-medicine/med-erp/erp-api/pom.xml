@@ -11,5 +11,11 @@
 
     <artifactId>erp-api</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.sky</groupId>
+            <artifactId>erp-domain</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
