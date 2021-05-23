@@ -67,6 +67,7 @@ export const constantRoutes = [
     ]
   }
 ]
+// 异步路由
 export const asyncRoutes = [
   {
     path: '/system',
@@ -235,6 +236,126 @@ export const asyncRoutes = [
         component: () => import('@/views/error-page/404'),
         name: '/stock/inventory',
         meta: { title: '库存查询', icon: 'list' }
+      }
+    ]
+  },
+  {
+    path: '/charge',
+    component: Layout,
+    redirect: 'noRedirect',
+    name: '/charge',
+    meta: {
+      title: '收费管理',
+      icon: 'excel'
+    },
+    children: [
+      {
+        path: 'charge',
+        component: () => import('@/views/error-page/404'),
+        name: '/charge/docharge',
+        meta: { title: '处方收费', icon: 'list' }
+      },
+      {
+        path: 'chargelist',
+        component: () => import('@/views/error-page/404'),
+        name: '/charge/chargelist',
+        meta: { title: '收费查询', icon: 'list' }
+      },
+      {
+        path: 'backfee',
+        component: () => import('@/views/error-page/404'),
+        name: '/charge/backfee',
+        meta: { title: '处方退费', icon: 'list' }
+      },
+      {
+        path: 'backfeelist',
+        component: () => import('@/views/error-page/404'),
+        name: '/charge/backfeelist',
+        meta: { title: '退费查询', icon: 'list' }
+      },
+      {
+        path: 'dispensing',
+        component: () => import('@/views/error-page/404'),
+        name: '/charge/dispensing',
+        meta: { title: '处方发药', icon: 'list' }
+      }
+    ]
+  },
+  {
+    path: '/check',
+    component: Layout,
+    redirect: 'noRedirect',
+    name: '/check',
+    meta: {
+      title: '检查管理',
+      icon: 'excel'
+    },
+    children: [
+      {
+        path: 'docheck',
+        component: () => import('@/views/error-page/404'),
+        name: '/check/docheck',
+        meta: { title: '新开检查', icon: 'list' }
+      },
+      {
+        path: 'checkresult',
+        component: () => import('@/views/error-page/404'),
+        name: '/check/checkresult',
+        meta: { title: '检查结果录入', icon: 'list' }
+      },
+      {
+        path: 'checklist',
+        component: () => import('@/views/error-page/404'),
+        name: '/check/checklist',
+        meta: { title: '检查结果查询', icon: 'list' }
+      }
+    ]
+  },
+  {
+    path: '/doctor',
+    component: Layout,
+    redirect: 'noRedirect',
+    name: '/doctor',
+    meta: {
+      title: '看病就诊',
+      icon: 'excel'
+    },
+    children: [
+      {
+        path: 'registered',
+        component: () => import('@/views/error-page/404'),
+        name: '/doctor/registered',
+        meta: { title: '门诊挂号', icon: 'list' }
+      },
+      {
+        path: 'registeredlist',
+        component: () => import('@/views/error-page/404'),
+        name: '/doctor/registeredlist',
+        meta: { title: '挂号列表', icon: 'list' }
+      },
+      {
+        path: 'newcare',
+        component: () => import('@/views/error-page/404'),
+        name: '/doctor/newcare',
+        meta: { title: '新开就诊', icon: 'list' }
+      },
+      {
+        path: 'myscheduling',
+        component: () => import('@/views/error-page/404'),
+        name: '/doctor/myscheduling',
+        meta: { title: '我的排班', icon: 'list' }
+      },
+      {
+        path: 'scheduling',
+        component: () => import('@/views/error-page/404'),
+        name: '/doctor/scheduling',
+        meta: { title: '医生排班', icon: 'list' }
+      },
+      {
+        path: 'patient',
+        component: () => import('@/views/error-page/404'),
+        name: '/doctor/patient',
+        meta: { title: '患者库', icon: 'list' }
       }
     ]
   }
