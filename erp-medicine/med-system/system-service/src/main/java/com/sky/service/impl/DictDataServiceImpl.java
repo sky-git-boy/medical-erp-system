@@ -1,6 +1,7 @@
 package com.sky.service.impl;
 
 import cn.hutool.core.date.DateUtil;
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sky.constants.Constants;
@@ -10,6 +11,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -27,6 +30,9 @@ import com.sky.service.DictDataService;
 public class DictDataServiceImpl implements DictDataService {
     @Autowired
     private DictDataMapper dictDataMapper;
+
+    @Autowired
+    private StringRedisTemplate redisTemplate;
 
     @Override
     public DataGridView listPage(DictDataDto dictDataDto) {
@@ -73,11 +79,21 @@ public class DictDataServiceImpl implements DictDataService {
         }
     }
 
+    /**
+     * 之前是从数据库中查询
+     * 现在是从redis中查询
+     */
     @Override
     public List<DictData> selectDictDataByDictType(String dictType) {
-        QueryWrapper<DictData> qw = new QueryWrapper<>();
-        qw.eq(DictData.COL_DICT_TYPE,dictType);
-        qw.eq(DictData.COL_STATUS, Constants.STATUS_TRUE); // 可用的
-        return this.dictDataMapper.selectList(qw);
+        // 从 redis 中查询
+        String key = Constants.DICT_REDIS_PROFIX + dictType;
+        ValueOperations<String, String> ops = redisTemplate.opsForValue();
+        String json = ops.get(key);
+        return JSON.parseArray(json, DictData.class);
+
+//        QueryWrapper<DictData> qw = new QueryWrapper<>();
+//        qw.eq(DictData.COL_DICT_TYPE,dictType);
+//        qw.eq(DictData.COL_STATUS, Constants.STATUS_TRUE); // 可用的
+//        return this.dictDataMapper.selectList(qw);
     }
 }

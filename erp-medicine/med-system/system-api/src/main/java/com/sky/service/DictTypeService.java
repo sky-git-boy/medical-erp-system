@@ -44,5 +44,10 @@ public interface DictTypeService {
      * 根据 ID 查询一个字典类型
      */
     DictType selectDictTypeById(Long dictId);
+
+    /**
+     * 同步缓存
+     */
+    void dictCacheAsync();
 }
 

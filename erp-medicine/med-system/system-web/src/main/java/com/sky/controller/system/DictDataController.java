@@ -1,5 +1,7 @@
 package com.sky.controller.system;
 
+import com.sky.aspectj.annotation.Log;
+import com.sky.aspectj.enums.BusinessType;
 import com.sky.dto.DictDataDto;
 import com.sky.service.DictDataService;
 import com.sky.utils.ShiroSecurityUtils;
@@ -32,6 +34,7 @@ public class DictDataController {
 
     // 新增字典数据
     @PostMapping("/addDictData")
+    @Log(title = "新增字典数据", businessType = BusinessType.INSERT)
     public AjaxResult addDictData(@Validated DictDataDto dictDataDto) {
         dictDataDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.dictDataService.insert(dictDataDto));
@@ -39,6 +42,7 @@ public class DictDataController {
 
     // 修改字典数据
     @PutMapping("/updateDictData")
+    @Log(title = "修改字典数据", businessType = BusinessType.UPDATE)
     public AjaxResult updateDictData(@Validated DictDataDto dictDataDto) {
         dictDataDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.dictDataService.update(dictDataDto));
@@ -46,6 +50,7 @@ public class DictDataController {
 
     // 批量删除字典数据
     @DeleteMapping("/deleteDictDataByIds/{dictCodeIds}")
+    @Log(title = "删除字典数据", businessType = BusinessType.DELETE)
     public AjaxResult deleteDictDataByIds(@PathVariable @Validated @NotEmpty(message = "要删除的ID不能为空") Long[] dictCodeIds) {
         return AjaxResult.toAjax(this.dictDataService.deleteDictDataByIds(dictCodeIds));
     }

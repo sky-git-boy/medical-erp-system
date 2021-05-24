@@ -1,5 +1,7 @@
 package com.sky.controller.system;
 
+import com.sky.aspectj.annotation.Log;
+import com.sky.aspectj.enums.BusinessType;
 import com.sky.dto.DictTypeDto;
 import com.sky.service.DictTypeService;
 import com.sky.utils.ShiroSecurityUtils;
@@ -31,6 +33,7 @@ public class DictTypeController {
 
     // 新增字典类型
     @PostMapping("/addDictType")
+    @Log(title = "新增字典类型", businessType = BusinessType.INSERT)
     public AjaxResult addDictType(@Validated DictTypeDto dictTypeDto) {
         if(dictTypeService.checkDictTypeUnique(dictTypeDto.getDictId(), dictTypeDto.getDictType())) {
             return AjaxResult.fail("新增字典【" + dictTypeDto.getDictName() + "】失败，字典类型已存在");
@@ -47,6 +50,7 @@ public class DictTypeController {
 
     // 更新字典类型数据
     @PutMapping("/updateDictType")
+    @Log(title = "修改字典类型", businessType = BusinessType.UPDATE)
     public AjaxResult updateDictType(@Validated DictTypeDto dictTypeDto) {
         if(dictTypeService.checkDictTypeUnique(dictTypeDto.getDictId(), dictTypeDto.getDictType())) {
             return AjaxResult.fail("修改字典【" + dictTypeDto.getDictName() + "】失败，字典类型已存在");
@@ -57,6 +61,7 @@ public class DictTypeController {
 
     // 删除字典类型
     @DeleteMapping("/deleteDictTypeByIds/{dictIds}")
+    @Log(title = "删除字典类型",businessType = BusinessType.DELETE)
     public AjaxResult deleteDictTypeByIds(@PathVariable @Validated @NotEmpty(message = "要删除的ID不能为空") Long[] dictIds) {
         return AjaxResult.toAjax(this.dictTypeService.deleteDictTypeByIds(dictIds));
     }
@@ -67,6 +72,16 @@ public class DictTypeController {
         return AjaxResult.success(this.dictTypeService.list().getData());
     }
 
-    // 字典缓存同步 (待完善)
-
+    // 字典缓存同步
+    @GetMapping("/dictCacheAsync")
+    @Log(title = "同步字典信息到redis", businessType = BusinessType.OTHER)
+    public AjaxResult dictCacheAsync() {
+        try {
+            this.dictTypeService.dictCacheAsync();
+            return AjaxResult.success();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.error();
+        }
+    }
 }

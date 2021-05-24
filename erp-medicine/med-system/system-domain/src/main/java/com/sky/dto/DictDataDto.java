@@ -14,7 +14,7 @@ import java.util.Date;
  * @author sky
  * @create 2021-05-23 21:06
  */
-@ApiModel(value = "com-sky-domain-DictDataDto")
+@ApiModel(value = "com-sky-dto-DictDataDto")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
