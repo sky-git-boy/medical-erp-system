@@ -41,7 +41,7 @@ public class DictTypeController {
 
     // 根据字典类型ID查询一个字典信息
     @GetMapping("/getOne/{dictId}")
-    public AjaxResult getOne(@PathVariable @Validated @NotNull(message = "要删除的ID不能为空") Long dictId) {
+    public AjaxResult getOne(@PathVariable @Validated @NotNull(message = "要查找的ID不能为空") Long dictId) {
         return AjaxResult.success(this.dictTypeService.selectDictTypeById(dictId));
     }
 

@@ -1,4 +1,4 @@
-package com.sky.config.mybatisplus;
+package com.sky.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
