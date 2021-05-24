@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.DeptMapper">
+  <resultMap id="BaseResultMap" type="com.sky.domain.Dept">
+    <!--@mbg.generated-->
+    <!--@Table sys_dept-->
+    <id column="dept_id" jdbcType="BIGINT" property="deptId" />
+    <result column="dept_name" jdbcType="VARCHAR" property="deptName" />
+    <result column="reg_number" jdbcType="INTEGER" property="regNumber" />
+    <result column="dept_number" jdbcType="VARCHAR" property="deptNumber" />
+    <result column="order_num" jdbcType="INTEGER" property="orderNum" />
+    <result column="dept_leader" jdbcType="VARCHAR" property="deptLeader" />
+    <result column="leader_phone" jdbcType="VARCHAR" property="leaderPhone" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="del_flag" jdbcType="CHAR" property="delFlag" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    dept_id, dept_name, reg_number, dept_number, order_num, dept_leader, leader_phone, 
+    `status`, del_flag, create_time, update_time, create_by, update_by
+  </sql>
+</mapper>
