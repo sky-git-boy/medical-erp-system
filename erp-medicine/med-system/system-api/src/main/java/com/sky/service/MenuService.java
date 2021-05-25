@@ -3,6 +3,7 @@ package com.sky.service;
 import com.sky.domain.Menu;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.sky.domain.SimpleUser;
+import com.sky.dto.MenuDto;
 
 import java.util.List;
 
@@ -20,4 +21,39 @@ public interface MenuService {
      * @param simpleUser    如果isAdmin为true，simpleUser 可以为空
      */
     List<Menu> selectMenuTree(boolean isAdmin, SimpleUser simpleUser);
+
+    /**
+     * 根据条件查询所有菜单及权限信息
+     */
+    List<Menu> listAllMenus(MenuDto menuDto);
+
+    /**
+     * 根据 ID 查询菜单和权限
+     */
+    Menu getOne(Long menuId);
+
+    /**
+     * 修改菜单和权限信息
+     */
+    int updateMenu(MenuDto menuDto);
+
+    /**
+     * 添加菜单和权限信息
+     */
+    int addMenu(MenuDto menuDto);
+
+    /**
+     * 根据ID删除菜单和权限信息
+     */
+    int deleteMenuById(Long menuId);
+
+    /**
+     * 判断是否有子菜单
+     */
+    boolean hasChildByMenuId(Long menuId);
+
+    /**
+     * 根据 角色Id 获取菜单
+     */
+    List<Long> getMenuIdsByRoleId(Long roleId);
 }
