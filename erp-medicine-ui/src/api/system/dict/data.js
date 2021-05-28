@@ -19,7 +19,7 @@ export function addDictData(data) {
 // 批量删除字典数据
 export function deleteDictDataByIds(dictCodeIds) {
   return request({
-    url: '/system/dict/data/deleteDictDataByIds' + dictCodeIds,
+    url: '/system/dict/data/deleteDictDataByIds/' + dictCodeIds,
     method: 'delete'
   })
 }
@@ -34,14 +34,14 @@ export function updateDictData(data) {
 // 根据字典类型查询字典信息
 export function getDataByType(dictType) {
   return request({
-    url: '/system/dict/data/getDataByType' + dictType,
+    url: '/system/dict/data/getDataByType/' + dictType,
     method: 'get'
   })
 }
 // 根据字典数据ID查询字典数据
-export function getOne(dictCode) {
+export function getDictDataById(dictCode) {
   return request({
-    url: '/system/dict/data/getOne' + dictCode,
+    url: '/system/dict/data/getOne/' + dictCode,
     method: 'get'
   })
 }

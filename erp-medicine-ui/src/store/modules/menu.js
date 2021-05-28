@@ -62,7 +62,7 @@ const actions = {
         routeArr.push(...lastRoute)
         // 放到vuex里面，全局变量
         commit('SET_ROUTES', routeArr)
-        resolve(pushRouter)
+        resolve(routeArr)
       })
     })
   }

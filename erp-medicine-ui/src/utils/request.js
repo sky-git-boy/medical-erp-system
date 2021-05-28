@@ -65,6 +65,11 @@ service.interceptors.response.use(
         title: res.msg
       })
       return Promise.reject('error')// 记录错
+    } else if (res.code === 400) {
+      Notification.error({
+        title: res.msg
+      })
+      return Promise.reject('error')// 记录错
     } else {
       // 以上验证通过之后再放行
       return res
