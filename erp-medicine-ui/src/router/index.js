@@ -127,7 +127,7 @@ export const asyncRoutes = [
       },
       {
         path: 'notice',
-        component: () => import('@/views/error-page/404'),
+        component: () => import('@/views/system/notice/index'),
         name: '/system/notice',
         meta: {
           title: '通知公告',
@@ -150,6 +150,24 @@ export const asyncRoutes = [
         meta: {
           title: '操作日志管理',
           icon: 'clipboard'
+        }
+      },
+      {
+        path: 'ins_fee',
+        component: () => import('@/views/system/checkItem/index'),
+        name: '/system/ins_fee',
+        meta: {
+          title: '检查费用设置',
+          icon: 'international'
+        }
+      },
+      {
+        path: 'reg_fee',
+        component: () => import('@/views/system/registeredItem/index'),
+        name: '/system/reg_fee',
+        meta: {
+          title: '挂号费用设置',
+          icon: 'international'
         }
       }
     ]
