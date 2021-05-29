@@ -1,5 +1,5 @@
 module.exports = {
-  title: '药品信息ERP系统',
+  title: '医疗云平台',
 
   /**
    * @type {boolean} true | false
