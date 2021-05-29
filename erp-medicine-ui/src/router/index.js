@@ -136,7 +136,7 @@ export const asyncRoutes = [
       },
       {
         path: 'log_login',
-        component: () => import('@/views/system/operLog/index'),
+        component: () => import('@/views/system/loginInfo/index'),
         name: '/system/log_login',
         meta: {
           title: '登陆日志管理',
@@ -145,7 +145,7 @@ export const asyncRoutes = [
       },
       {
         path: 'log_opt',
-        component: () => import('@/views/error-page/404'),
+        component: () => import('@/views/system/operLog/index'),
         name: '/system/log_opt',
         meta: {
           title: '操作日志管理',

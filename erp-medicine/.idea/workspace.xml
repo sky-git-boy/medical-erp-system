@@ -2,69 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d5c365-cdcc-440e-8f52-9030a3c71ef7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../erp-medicine-ui/src/utils/hos-utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../erp-medicine-ui/src/api/system/dict/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/../erp-medicine-ui/src/api/system/dict/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../erp-medicine-ui/src/api/system/dict/type.js" beforeDir="false" afterPath="$PROJECT_DIR$/../erp-medicine-ui/src/api/system/dict/type.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../erp-medicine-ui/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../erp-medicine-ui/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../erp-medicine-ui/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../erp-medicine-ui/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../erp-medicine-ui/src/store/modules/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../erp-medicine-ui/src/store/modules/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../erp-medicine-ui/src/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/../erp-medicine-ui/src/utils/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../erp-medicine-ui/src/views/system/dict/data.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../erp-medicine-ui/src/views/system/dict/data.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../erp-medicine-ui/src/views/system/dict/type.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../erp-medicine-ui/src/views/system/dict/type.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-commons/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-commons/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-commons/target/med-commons-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-doctor/doctor-service/target/classes/application-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-doctor/doctor-service/target/classes/application-pro.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-doctor/doctor-service/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-doctor/doctor-service/target/classes/com/sky/DoctorApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-api/target/erp-api-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-api/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-domain/target/erp-damain-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-domain/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-domain/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-mapper/target/erp-mapper-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-mapper/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-mapper/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-service/target/classes/application-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-service/target/classes/application-pro.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-service/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-service/target/classes/com/sky/ErpApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-service/target/erp-service-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-service/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-erp/erp-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-statistics/statistics-service/target/classes/application-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-statistics/statistics-service/target/classes/application-pro.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-statistics/statistics-service/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-statistics/statistics-service/target/classes/com/sky/StatisticsApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-api/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-api/target/system-api-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-domain/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-domain/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-domain/target/system-domain-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-mapper/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-mapper/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-mapper/target/system-mapper-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-service/target/classes/com/sky/service/impl/MenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/med-system/system-service/target/classes/com/sky/service/impl/MenuServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-service/target/classes/com/sky/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/med-system/system-service/target/classes/com/sky/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-service/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-service/target/system-service-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-web/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-web/target/system-web-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,6 +249,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="系统管理模块&#10;- 字典类型管理前端实现&#10;- 字典数据管理前端实现" />
+    <MESSAGE value="系统管理模块&#10;- 字典类型及字典数据前端页面修改" />
   </component>
   <component name="WindowStateProjectService">
     <state x="340" y="126" key="#Project_Structure" timestamp="1621437863429">
@@ -341,38 +281,42 @@
       <screen x="0" y="0" width="1493" height="933" />
     </state>
     <state x="528" y="223" key="FileChooserDialogImpl/0.0.1493.933@0.0.1493.933" timestamp="1621424884456" />
-    <state width="1186" height="156" key="GridCell.Tab.0.bottom" timestamp="1622174089999">
+    <state x="606" y="368" key="GitRewordDialog" timestamp="1622251067115">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="156" key="GridCell.Tab.0.bottom/0.0.1493.933@0.0.1493.933" timestamp="1622174089999" />
-    <state width="1186" height="156" key="GridCell.Tab.0.center" timestamp="1622174089998">
+    <state x="606" y="368" key="GitRewordDialog/0.0.1493.933@0.0.1493.933" timestamp="1622251067115" />
+    <state width="1186" height="371" key="GridCell.Tab.0.bottom" timestamp="1622251053309">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="156" key="GridCell.Tab.0.center/0.0.1493.933@0.0.1493.933" timestamp="1622174089998" />
-    <state width="1186" height="156" key="GridCell.Tab.0.left" timestamp="1622174089998">
+    <state width="1186" height="371" key="GridCell.Tab.0.bottom/0.0.1493.933@0.0.1493.933" timestamp="1622251053309" />
+    <state width="1186" height="371" key="GridCell.Tab.0.center" timestamp="1622251053309">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="156" key="GridCell.Tab.0.left/0.0.1493.933@0.0.1493.933" timestamp="1622174089998" />
-    <state width="1186" height="156" key="GridCell.Tab.0.right" timestamp="1622174089999">
+    <state width="1186" height="371" key="GridCell.Tab.0.center/0.0.1493.933@0.0.1493.933" timestamp="1622251053309" />
+    <state width="1186" height="371" key="GridCell.Tab.0.left" timestamp="1622251053309">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="156" key="GridCell.Tab.0.right/0.0.1493.933@0.0.1493.933" timestamp="1622174089999" />
-    <state width="1186" height="156" key="GridCell.Tab.1.bottom" timestamp="1622174090000">
+    <state width="1186" height="371" key="GridCell.Tab.0.left/0.0.1493.933@0.0.1493.933" timestamp="1622251053309" />
+    <state width="1186" height="371" key="GridCell.Tab.0.right" timestamp="1622251053309">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="156" key="GridCell.Tab.1.bottom/0.0.1493.933@0.0.1493.933" timestamp="1622174090000" />
-    <state width="1186" height="156" key="GridCell.Tab.1.center" timestamp="1622174089999">
+    <state width="1186" height="371" key="GridCell.Tab.0.right/0.0.1493.933@0.0.1493.933" timestamp="1622251053309" />
+    <state width="1186" height="371" key="GridCell.Tab.1.bottom" timestamp="1622251053310">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="156" key="GridCell.Tab.1.center/0.0.1493.933@0.0.1493.933" timestamp="1622174089999" />
-    <state width="1186" height="156" key="GridCell.Tab.1.left" timestamp="1622174089999">
+    <state width="1186" height="371" key="GridCell.Tab.1.bottom/0.0.1493.933@0.0.1493.933" timestamp="1622251053310" />
+    <state width="1186" height="371" key="GridCell.Tab.1.center" timestamp="1622251053310">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="156" key="GridCell.Tab.1.left/0.0.1493.933@0.0.1493.933" timestamp="1622174089999" />
-    <state width="1186" height="156" key="GridCell.Tab.1.right" timestamp="1622174090000">
+    <state width="1186" height="371" key="GridCell.Tab.1.center/0.0.1493.933@0.0.1493.933" timestamp="1622251053310" />
+    <state width="1186" height="371" key="GridCell.Tab.1.left" timestamp="1622251053310">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="156" key="GridCell.Tab.1.right/0.0.1493.933@0.0.1493.933" timestamp="1622174090000" />
+    <state width="1186" height="371" key="GridCell.Tab.1.left/0.0.1493.933@0.0.1493.933" timestamp="1622251053310" />
+    <state width="1186" height="371" key="GridCell.Tab.1.right" timestamp="1622251053310">
+      <screen x="0" y="0" width="1493" height="933" />
+    </state>
+    <state width="1186" height="371" key="GridCell.Tab.1.right/0.0.1493.933@0.0.1493.933" timestamp="1622251053310" />
     <state width="1276" height="453" key="GridCell.Tab.2.bottom" timestamp="1621437652382">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
