@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <!-- 查询条件开始 -->
-    <el-form ref="queryForm" :model="queryParams" :inline="true" label-width="68px">
+    <el-form ref="queryForm" :model="queryParams" :inline="true">
       <el-form-item label="字典类型" prop="dictType">
         <el-select
           v-model="queryParams.dictType"
