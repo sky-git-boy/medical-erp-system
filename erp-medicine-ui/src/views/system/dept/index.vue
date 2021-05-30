@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <!-- 查询条件开始 -->
-    <el-form ref="queryForm" :model="queryParams" :inline="true" label-width="68px">
+    <el-form ref="queryForm" :model="queryParams" :inline="true">
       <el-form-item label="科室名称" prop="deptName">
         <el-input
           v-model="queryParams.deptName"
@@ -62,7 +62,7 @@
 
     <!-- 数据表格开始 -->
     <el-table v-loading="loading" border :data="deptTableList" @selection-change="handleSelectionChange">
-      <el-table-column type="selection" width="55" align="center" />
+      <el-table-column type="selection" align="center" />
       <el-table-column label="科室ID" align="center" prop="deptId" />
       <el-table-column label="科室名称" align="center" prop="deptName" />
       <el-table-column label="科室编码" align="center" prop="deptNumber" />
@@ -71,8 +71,8 @@
       <el-table-column label="负责人" align="center" prop="deptLeader" />
       <el-table-column label="电话" align="center" prop="leaderPhone" />
       <el-table-column label="状态" prop="status" align="center" :formatter="statusFormatter" />
-      <el-table-column label="创建时间" align="center" prop="createTime" />
-      <el-table-column label="操作" align="center">
+      <el-table-column label="创建时间" width="200px" align="center" prop="createTime" />
+      <el-table-column label="操作" width="120" align="center">
         <template slot-scope="scope">
           <el-button type="text" icon="el-icon-edit" size="mini" @click="handleUpdate(scope.row)">修改</el-button>
           <el-button type="text" icon="el-icon-delete" size="mini" @click="handleDelete(scope.row)">删除</el-button>
