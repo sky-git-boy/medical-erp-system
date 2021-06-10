@@ -2,6 +2,7 @@ package com.sky.controller.system;
 
 import com.sky.aspectj.annotation.Log;
 import com.sky.aspectj.enums.BusinessType;
+import com.sky.controller.BaseController;
 import com.sky.dto.CheckItemDto;
 import com.sky.service.CheckItemService;
 import com.sky.utils.ShiroSecurityUtils;
@@ -20,7 +21,7 @@ import javax.validation.constraints.NotNull;
  */
 @RestController
 @RequestMapping("system/checkItem")
-public class CheckItemController {
+public class CheckItemController extends BaseController {
 
     @Autowired
     private CheckItemService checkItemService;

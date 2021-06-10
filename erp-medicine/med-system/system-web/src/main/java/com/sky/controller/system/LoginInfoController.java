@@ -1,5 +1,6 @@
 package com.sky.controller.system;
 
+import com.sky.controller.BaseController;
 import com.sky.dto.LoginInfoDto;
 import com.sky.service.LoginInfoService;
 import com.sky.vo.AjaxResult;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @Log4j2
 @RestController
 @RequestMapping("system/loginInfo")
-public class LoginInfoController {
+public class LoginInfoController extends BaseController {
 
     @Autowired
     private LoginInfoService loginInfoService;

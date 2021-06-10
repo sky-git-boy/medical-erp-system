@@ -1,6 +1,7 @@
 package com.sky.controller.system;
 
 import com.sky.constants.Constants;
+import com.sky.controller.BaseController;
 import com.sky.domain.Menu;
 import com.sky.dto.MenuDto;
 import com.sky.service.MenuService;
@@ -18,7 +19,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/system/menu")
-public class MenuController {
+public class MenuController extends BaseController {
     @Autowired
     private MenuService menuService;
 

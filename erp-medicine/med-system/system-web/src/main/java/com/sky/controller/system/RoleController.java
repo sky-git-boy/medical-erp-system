@@ -2,6 +2,7 @@ package com.sky.controller.system;
 
 import com.sky.aspectj.annotation.Log;
 import com.sky.aspectj.enums.BusinessType;
+import com.sky.controller.BaseController;
 import com.sky.dto.RoleDto;
 import com.sky.service.RoleService;
 import com.sky.utils.ShiroSecurityUtils;
@@ -21,7 +22,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("system/role")
-public class RoleController {
+public class RoleController extends BaseController {
     @Autowired
     private RoleService roleService;
 

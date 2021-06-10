@@ -2,6 +2,7 @@ package com.sky.controller.system;
 
 import com.sky.aspectj.annotation.Log;
 import com.sky.aspectj.enums.BusinessType;
+import com.sky.controller.BaseController;
 import com.sky.dto.DictDataDto;
 import com.sky.service.DictDataService;
 import com.sky.utils.ShiroSecurityUtils;
@@ -21,7 +22,7 @@ import javax.validation.constraints.NotNull;
  */
 @RestController
 @RequestMapping("/system/dict/data")
-public class DictDataController {
+public class DictDataController extends BaseController {
     @Autowired
     private DictDataService dictDataService;
 

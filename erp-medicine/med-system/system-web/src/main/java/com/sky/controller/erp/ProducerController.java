@@ -3,6 +3,7 @@ package com.sky.controller.erp;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.sky.aspectj.annotation.Log;
 import com.sky.aspectj.enums.BusinessType;
+import com.sky.controller.BaseController;
 import com.sky.dto.ProducerDto;
 import com.sky.service.ProducerService;
 import com.sky.utils.ShiroSecurityUtils;
@@ -21,7 +22,7 @@ import javax.validation.constraints.NotNull;
  */
 @RestController
 @RequestMapping("erp/producer")
-public class ProducerController {
+public class ProducerController extends BaseController {
     @Reference
     private ProducerService producerService;
 

@@ -1,5 +1,6 @@
 package com.sky.controller.system;
 
+import com.sky.controller.BaseController;
 import com.sky.dto.OperLogDto;
 import com.sky.service.OperLogService;
 import com.sky.vo.AjaxResult;
@@ -18,7 +19,7 @@ import javax.validation.constraints.NotNull;
 @Log4j2
 @RestController
 @RequestMapping("system/operLog")
-public class OperLogController {
+public class OperLogController extends BaseController {
 
     @Autowired
     private OperLogService operLogService;

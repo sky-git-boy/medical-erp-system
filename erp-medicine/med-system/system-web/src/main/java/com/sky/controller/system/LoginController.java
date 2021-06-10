@@ -3,6 +3,7 @@ package com.sky.controller.system;
 import cn.hutool.core.date.DateUtil;
 import com.sky.constants.Constants;
 import com.sky.constants.HttpStatus;
+import com.sky.controller.BaseController;
 import com.sky.domain.LoginInfo;
 import com.sky.domain.Menu;
 import com.sky.domain.SimpleUser;
@@ -35,7 +36,7 @@ import java.util.List;
  */
 @RestController
 @Log4j2
-public class LoginController {
+public class LoginController extends BaseController {
 
     @Autowired
     private MenuService menuService;
