@@ -22,13 +22,13 @@ import javax.validation.constraints.NotNull;
  */
 @RestController
 @RequestMapping("erp/producer")
-public class ProducerController extends BaseController {
+public class ProducerController extends BaseController{
     @Reference
     private ProducerService producerService;
 
     @GetMapping("listProducerForPage")
-    @HystrixCommand
     public AjaxResult listProducerForPage(ProducerDto producerDto) {
+        System.out.println(111);
         DataGridView gridView = this.producerService.listProducerPage(producerDto);
         return AjaxResult.success("查询成功", gridView.getData(), gridView.getTotal());
     }
