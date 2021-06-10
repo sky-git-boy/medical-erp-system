@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.ProducerMapper">
+    <resultMap id="BaseResultMap" type="com.sky.domain.Producer">
+        <!--@mbg.generated-->
+        <!--@Table stock_producer-->
+        <id column="producer_id" jdbcType="BIGINT" property="producerId"/>
+        <result column="producer_name" jdbcType="VARCHAR" property="producerName"/>
+        <result column="producer_code" jdbcType="VARCHAR" property="producerCode"/>
+        <result column="producer_address" jdbcType="VARCHAR" property="producerAddress"/>
+        <result column="producer_tel" jdbcType="VARCHAR" property="producerTel"/>
+        <result column="producer_person" jdbcType="VARCHAR" property="producerPerson"/>
+        <result column="keywords" jdbcType="VARCHAR" property="keywords"/>
+        <result column="status" jdbcType="CHAR" property="status"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        producer_id, producer_name, producer_code, producer_address, producer_tel, producer_person,
+        keywords, `status`, create_time, update_time, create_by, update_by
+    </sql>
+</mapper>
