@@ -78,6 +78,18 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="medicine-erp:stock_provider">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="provider_id" />
+                  <option name="javaModelName" value="Provider" />
+                  <option name="moduleName" value="erp-service" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="medicine-erp:sys_menu">
               <value>
                 <TableGenerateConfig>

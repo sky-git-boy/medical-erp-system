@@ -10,6 +10,7 @@ import com.sky.dto.MedicinesDto;
 import com.sky.mapper.MedicinesMapper;
 import com.sky.vo.DataGridView;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.dubbo.config.annotation.Method;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,10 +21,12 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * methods = {@Method(name = "Medicines",retries = 0)
+ * 代表当前类里面的Medicines这个主就去只调一次，不重试
  * @author sky
  * @create 2021-06-14 20:33
  */
-@Service
+@Service(methods = {@Method(name = "addMedicines", retries = 0)})
 public class MedicinesServiceImpl implements MedicinesService {
 
     @Autowired

@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d5c365-cdcc-440e-8f52-9030a3c71ef7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/med-erp/erp-api/src/main/java/com/sky/service/MedicinesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/med-erp/erp-domain/src/main/java/com/sky/domain/Medicines.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/med-erp/erp-domain/src/main/java/com/sky/dto/MedicinesDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/med-erp/erp-mapper/src/main/java/com/sky/mapper/MedicinesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/med-erp/erp-mapper/src/main/resources/mapper/MedicinesMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/med-erp/erp-service/src/main/java/com/sky/service/impl/MedicinesServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/med-system/system-web/src/main/java/com/sky/controller/erp/MedicinesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-commons/target/classes/com/sky/dto/BaseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/med-commons/target/classes/com/sky/dto/BaseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/med-system/system-web/src/main/java/com/sky/controller/erp/ProducerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/med-system/system-web/src/main/java/com/sky/controller/erp/ProducerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-erp/erp-api/src/main/java/com/sky/service/ProviderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-erp/erp-domain/src/main/java/com/sky/domain/Provider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-erp/erp-domain/src/main/java/com/sky/dto/ProviderDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-erp/erp-mapper/src/main/java/com/sky/mapper/ProviderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-erp/erp-mapper/src/main/resources/mapper/ProviderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-erp/erp-service/src/main/java/com/sky/service/impl/ProviderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-system/system-web/src/main/java/com/sky/controller/erp/ProviderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/med-erp/erp-service/src/main/java/com/sky/service/impl/MedicinesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/med-erp/erp-service/src/main/java/com/sky/service/impl/MedicinesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/med-erp/erp-service/target/classes/com/sky/service/impl/MedicinesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/med-erp/erp-service/target/classes/com/sky/service/impl/MedicinesServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,8 +105,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.sky.controller.erp" />
       <recent name="com.sky.dto" />
+      <recent name="com.sky.controller.erp" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\MedicineERP\erp-medicine\med-doctor\doctor-service\src\main\resources" />
@@ -248,7 +248,7 @@
       <workItem from="1623308450895" duration="6368000" />
       <workItem from="1623505815555" duration="5928000" />
       <workItem from="1623643995284" duration="606000" />
-      <workItem from="1623671270711" duration="3443000" />
+      <workItem from="1623671270711" duration="5006000" />
     </task>
     <task id="LOCAL-00001" summary="药品进销存管理模块 - 生产产家信息管理后端实现">
       <created>1623308844941</created>
@@ -303,10 +303,10 @@
       <screen x="0" y="0" width="1493" height="933" />
     </state>
     <state x="340" y="126" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1493.933@0.0.1493.933" timestamp="1621433825935" />
-    <state x="553" y="177" key="#com.intellij.ide.util.MemberChooser" timestamp="1623675770834">
+    <state x="553" y="177" key="#com.intellij.ide.util.MemberChooser" timestamp="1623678691671">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state x="553" y="177" key="#com.intellij.ide.util.MemberChooser/0.0.1493.933@0.0.1493.933" timestamp="1623675770834" />
+    <state x="553" y="177" key="#com.intellij.ide.util.MemberChooser/0.0.1493.933@0.0.1493.933" timestamp="1623678691671" />
     <state x="478" y="243" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1622899391916">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
@@ -331,38 +331,38 @@
       <screen x="0" y="0" width="1493" height="933" />
     </state>
     <state x="606" y="368" key="GitRewordDialog/0.0.1493.933@0.0.1493.933" timestamp="1622251307075" />
-    <state width="1186" height="398" key="GridCell.Tab.0.bottom" timestamp="1623677389228">
+    <state width="1186" height="455" key="GridCell.Tab.0.bottom" timestamp="1623679218692">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="398" key="GridCell.Tab.0.bottom/0.0.1493.933@0.0.1493.933" timestamp="1623677389228" />
-    <state width="1186" height="398" key="GridCell.Tab.0.center" timestamp="1623677389228">
+    <state width="1186" height="455" key="GridCell.Tab.0.bottom/0.0.1493.933@0.0.1493.933" timestamp="1623679218692" />
+    <state width="1186" height="455" key="GridCell.Tab.0.center" timestamp="1623679218692">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="398" key="GridCell.Tab.0.center/0.0.1493.933@0.0.1493.933" timestamp="1623677389228" />
-    <state width="1186" height="398" key="GridCell.Tab.0.left" timestamp="1623677389228">
+    <state width="1186" height="455" key="GridCell.Tab.0.center/0.0.1493.933@0.0.1493.933" timestamp="1623679218692" />
+    <state width="1186" height="455" key="GridCell.Tab.0.left" timestamp="1623679218692">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="398" key="GridCell.Tab.0.left/0.0.1493.933@0.0.1493.933" timestamp="1623677389228" />
-    <state width="1186" height="398" key="GridCell.Tab.0.right" timestamp="1623677389228">
+    <state width="1186" height="455" key="GridCell.Tab.0.left/0.0.1493.933@0.0.1493.933" timestamp="1623679218692" />
+    <state width="1186" height="455" key="GridCell.Tab.0.right" timestamp="1623679218692">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="398" key="GridCell.Tab.0.right/0.0.1493.933@0.0.1493.933" timestamp="1623677389228" />
-    <state width="1186" height="398" key="GridCell.Tab.1.bottom" timestamp="1623677389229">
+    <state width="1186" height="455" key="GridCell.Tab.0.right/0.0.1493.933@0.0.1493.933" timestamp="1623679218692" />
+    <state width="1186" height="455" key="GridCell.Tab.1.bottom" timestamp="1623679218692">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="398" key="GridCell.Tab.1.bottom/0.0.1493.933@0.0.1493.933" timestamp="1623677389229" />
-    <state width="1186" height="398" key="GridCell.Tab.1.center" timestamp="1623677389228">
+    <state width="1186" height="455" key="GridCell.Tab.1.bottom/0.0.1493.933@0.0.1493.933" timestamp="1623679218692" />
+    <state width="1186" height="455" key="GridCell.Tab.1.center" timestamp="1623679218692">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="398" key="GridCell.Tab.1.center/0.0.1493.933@0.0.1493.933" timestamp="1623677389228" />
-    <state width="1186" height="398" key="GridCell.Tab.1.left" timestamp="1623677389228">
+    <state width="1186" height="455" key="GridCell.Tab.1.center/0.0.1493.933@0.0.1493.933" timestamp="1623679218692" />
+    <state width="1186" height="455" key="GridCell.Tab.1.left" timestamp="1623679218692">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="398" key="GridCell.Tab.1.left/0.0.1493.933@0.0.1493.933" timestamp="1623677389228" />
-    <state width="1186" height="398" key="GridCell.Tab.1.right" timestamp="1623677389229">
+    <state width="1186" height="455" key="GridCell.Tab.1.left/0.0.1493.933@0.0.1493.933" timestamp="1623679218692" />
+    <state width="1186" height="455" key="GridCell.Tab.1.right" timestamp="1623679218692">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="398" key="GridCell.Tab.1.right/0.0.1493.933@0.0.1493.933" timestamp="1623677389229" />
+    <state width="1186" height="455" key="GridCell.Tab.1.right/0.0.1493.933@0.0.1493.933" timestamp="1623679218692" />
     <state width="1186" height="334" key="GridCell.Tab.2.bottom" timestamp="1623323166330">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
