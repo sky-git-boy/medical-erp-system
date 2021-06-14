@@ -17,18 +17,19 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 /**
+ * 生产厂家控制器
  * @author sky
  * @create 2021-06-06 14:56
  */
 @RestController
 @RequestMapping("erp/producer")
-public class ProducerController extends BaseController{
+public class ProducerController extends BaseController {
+    //使用dubbo的引用
     @Reference
     private ProducerService producerService;
 
     @GetMapping("listProducerForPage")
     public AjaxResult listProducerForPage(ProducerDto producerDto) {
-        System.out.println(111);
         DataGridView gridView = this.producerService.listProducerPage(producerDto);
         return AjaxResult.success("查询成功", gridView.getData(), gridView.getTotal());
     }

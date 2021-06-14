@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d5c365-cdcc-440e-8f52-9030a3c71ef7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../erp-medicine-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../erp-medicine-ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../erp-medicine-ui/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../erp-medicine-ui/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../erp-medicine-ui/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../erp-medicine-ui/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../erp-medicine-ui/src/utils/hos-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../erp-medicine-ui/src/utils/hos-utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-erp/erp-api/src/main/java/com/sky/service/MedicinesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-erp/erp-domain/src/main/java/com/sky/domain/Medicines.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-erp/erp-domain/src/main/java/com/sky/dto/MedicinesDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-erp/erp-mapper/src/main/java/com/sky/mapper/MedicinesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-erp/erp-mapper/src/main/resources/mapper/MedicinesMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-erp/erp-service/src/main/java/com/sky/service/impl/MedicinesServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/med-system/system-web/src/main/java/com/sky/controller/erp/MedicinesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/med-commons/target/classes/com/sky/dto/BaseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/med-commons/target/classes/com/sky/dto/BaseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/med-system/system-web/src/main/java/com/sky/controller/erp/ProducerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/med-system/system-web/src/main/java/com/sky/controller/erp/ProducerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,16 +94,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/med-doctor/doctor-service/src/main/resources" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="spring.boot" />
+    <property name="settings.editor.selected.configurable" value="com.ccnode.codegenerator.ab.e" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sky.controller.erp" />
+      <recent name="com.sky.dto" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\MedicineERP\erp-medicine\med-doctor\doctor-service\src\main\resources" />
       <recent name="D:\MedicineERP\erp-medicine\med-statistics\statistics-service\src\main\resources" />
@@ -111,7 +120,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SystemApplication">
+  <component name="RunManager" selected="Spring Boot.ErpApplication">
     <configuration name="AppMd5Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sky.utils.AppMd5Utils" />
       <module name="med-commons" />
@@ -197,7 +206,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -232,7 +241,30 @@
       <workItem from="1621424275396" duration="13285000" />
       <workItem from="1621490826771" duration="3195000" />
       <workItem from="1622364195179" duration="1264000" />
+      <workItem from="1622770746599" duration="601000" />
+      <workItem from="1622811618496" duration="2431000" />
+      <workItem from="1622878264013" duration="7396000" />
+      <workItem from="1623308326972" duration="16000" />
+      <workItem from="1623308450895" duration="6368000" />
+      <workItem from="1623505815555" duration="5928000" />
+      <workItem from="1623643995284" duration="606000" />
+      <workItem from="1623671270711" duration="3443000" />
     </task>
+    <task id="LOCAL-00001" summary="药品进销存管理模块 - 生产产家信息管理后端实现">
+      <created>1623308844941</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623308844941</updated>
+    </task>
+    <task id="LOCAL-00002" summary="所有Controller进行修改&#10;- extends BaseController">
+      <created>1623309238143</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623309238143</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,20 +290,27 @@
     <MESSAGE value="系统管理模块&#10;- 操作日志模块前端实现&#10;- 登录日志模块前端实现" />
     <MESSAGE value="系统管理模块&#10;- 菜单管理后端实现&#10;- 角色管理后端实现&#10;- 用户管理后端实现" />
     <MESSAGE value="系统管理模块&#10;- 工具类创建&#10;- 模块环境配置" />
+    <MESSAGE value="药品进销存管理模块 - 生产产家信息管理后端实现" />
+    <MESSAGE value="所有Controller进行修改&#10;- extends BaseController" />
+    <option name="LAST_COMMIT_MESSAGE" value="所有Controller进行修改&#10;- extends BaseController" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="340" y="126" key="#Project_Structure" timestamp="1621437863429">
+    <state x="340" y="126" key="#Project_Structure" timestamp="1622899626123">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state x="340" y="126" key="#Project_Structure/0.0.1493.933@0.0.1493.933" timestamp="1621437863429" />
+    <state x="340" y="126" key="#Project_Structure/0.0.1493.933@0.0.1493.933" timestamp="1622899626123" />
     <state x="340" y="126" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621433825935">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
     <state x="340" y="126" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1493.933@0.0.1493.933" timestamp="1621433825935" />
-    <state x="553" y="177" key="#com.intellij.ide.util.MemberChooser" timestamp="1621429715706">
+    <state x="553" y="177" key="#com.intellij.ide.util.MemberChooser" timestamp="1623675770834">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state x="553" y="177" key="#com.intellij.ide.util.MemberChooser/0.0.1493.933@0.0.1493.933" timestamp="1621429715706" />
+    <state x="553" y="177" key="#com.intellij.ide.util.MemberChooser/0.0.1493.933@0.0.1493.933" timestamp="1623675770834" />
+    <state x="478" y="243" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1622899391916">
+      <screen x="0" y="0" width="1493" height="933" />
+    </state>
+    <state x="478" y="243" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1493.933@0.0.1493.933" timestamp="1622899391916" />
     <state x="559" y="251" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1621425303317">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
@@ -280,88 +319,77 @@
       <screen x="0" y="0" width="1493" height="933" />
     </state>
     <state x="367" y="393" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1493.933@0.0.1493.933" timestamp="1621334763721" />
-    <state x="64" y="61" key="CommitChangelistDialog2" timestamp="1621497186194">
+    <state x="64" y="61" key="CommitChangelistDialog2" timestamp="1623333067834">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state x="64" y="61" key="CommitChangelistDialog2/0.0.1493.933@0.0.1493.933" timestamp="1621497186194" />
-    <state x="528" y="223" key="FileChooserDialogImpl" timestamp="1621424884456">
+    <state x="64" y="61" key="CommitChangelistDialog2/0.0.1493.933@0.0.1493.933" timestamp="1623333067834" />
+    <state x="528" y="223" key="FileChooserDialogImpl" timestamp="1622899581322">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state x="528" y="223" key="FileChooserDialogImpl/0.0.1493.933@0.0.1493.933" timestamp="1621424884456" />
+    <state x="528" y="223" key="FileChooserDialogImpl/0.0.1493.933@0.0.1493.933" timestamp="1622899581322" />
     <state x="606" y="368" key="GitRewordDialog" timestamp="1622251307075">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
     <state x="606" y="368" key="GitRewordDialog/0.0.1493.933@0.0.1493.933" timestamp="1622251307075" />
-    <state width="1186" height="368" key="GridCell.Tab.0.bottom" timestamp="1622378874829">
+    <state width="1186" height="398" key="GridCell.Tab.0.bottom" timestamp="1623677389228">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="368" key="GridCell.Tab.0.bottom/0.0.1493.933@0.0.1493.933" timestamp="1622378874829" />
-    <state width="1186" height="368" key="GridCell.Tab.0.center" timestamp="1622378874829">
+    <state width="1186" height="398" key="GridCell.Tab.0.bottom/0.0.1493.933@0.0.1493.933" timestamp="1623677389228" />
+    <state width="1186" height="398" key="GridCell.Tab.0.center" timestamp="1623677389228">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="368" key="GridCell.Tab.0.center/0.0.1493.933@0.0.1493.933" timestamp="1622378874829" />
-    <state width="1186" height="368" key="GridCell.Tab.0.left" timestamp="1622378874829">
+    <state width="1186" height="398" key="GridCell.Tab.0.center/0.0.1493.933@0.0.1493.933" timestamp="1623677389228" />
+    <state width="1186" height="398" key="GridCell.Tab.0.left" timestamp="1623677389228">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="368" key="GridCell.Tab.0.left/0.0.1493.933@0.0.1493.933" timestamp="1622378874829" />
-    <state width="1186" height="368" key="GridCell.Tab.0.right" timestamp="1622378874829">
+    <state width="1186" height="398" key="GridCell.Tab.0.left/0.0.1493.933@0.0.1493.933" timestamp="1623677389228" />
+    <state width="1186" height="398" key="GridCell.Tab.0.right" timestamp="1623677389228">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="368" key="GridCell.Tab.0.right/0.0.1493.933@0.0.1493.933" timestamp="1622378874829" />
-    <state width="1186" height="368" key="GridCell.Tab.1.bottom" timestamp="1622378874829">
+    <state width="1186" height="398" key="GridCell.Tab.0.right/0.0.1493.933@0.0.1493.933" timestamp="1623677389228" />
+    <state width="1186" height="398" key="GridCell.Tab.1.bottom" timestamp="1623677389229">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="368" key="GridCell.Tab.1.bottom/0.0.1493.933@0.0.1493.933" timestamp="1622378874829" />
-    <state width="1186" height="368" key="GridCell.Tab.1.center" timestamp="1622378874829">
+    <state width="1186" height="398" key="GridCell.Tab.1.bottom/0.0.1493.933@0.0.1493.933" timestamp="1623677389229" />
+    <state width="1186" height="398" key="GridCell.Tab.1.center" timestamp="1623677389228">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="368" key="GridCell.Tab.1.center/0.0.1493.933@0.0.1493.933" timestamp="1622378874829" />
-    <state width="1186" height="368" key="GridCell.Tab.1.left" timestamp="1622378874829">
+    <state width="1186" height="398" key="GridCell.Tab.1.center/0.0.1493.933@0.0.1493.933" timestamp="1623677389228" />
+    <state width="1186" height="398" key="GridCell.Tab.1.left" timestamp="1623677389228">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="368" key="GridCell.Tab.1.left/0.0.1493.933@0.0.1493.933" timestamp="1622378874829" />
-    <state width="1186" height="368" key="GridCell.Tab.1.right" timestamp="1622378874829">
+    <state width="1186" height="398" key="GridCell.Tab.1.left/0.0.1493.933@0.0.1493.933" timestamp="1623677389228" />
+    <state width="1186" height="398" key="GridCell.Tab.1.right" timestamp="1623677389229">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1186" height="368" key="GridCell.Tab.1.right/0.0.1493.933@0.0.1493.933" timestamp="1622378874829" />
-    <state width="1276" height="453" key="GridCell.Tab.2.bottom" timestamp="1621437652382">
+    <state width="1186" height="398" key="GridCell.Tab.1.right/0.0.1493.933@0.0.1493.933" timestamp="1623677389229" />
+    <state width="1186" height="334" key="GridCell.Tab.2.bottom" timestamp="1623323166330">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1276" height="453" key="GridCell.Tab.2.bottom/0.0.1493.933@0.0.1493.933" timestamp="1621437652382" />
-    <state width="1276" height="453" key="GridCell.Tab.2.center" timestamp="1621437652381">
+    <state width="1186" height="334" key="GridCell.Tab.2.bottom/0.0.1493.933@0.0.1493.933" timestamp="1623323166330" />
+    <state width="1186" height="334" key="GridCell.Tab.2.center" timestamp="1623323166330">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1276" height="453" key="GridCell.Tab.2.center/0.0.1493.933@0.0.1493.933" timestamp="1621437652381" />
-    <state width="1276" height="453" key="GridCell.Tab.2.left" timestamp="1621437652381">
+    <state width="1186" height="334" key="GridCell.Tab.2.center/0.0.1493.933@0.0.1493.933" timestamp="1623323166330" />
+    <state width="1186" height="334" key="GridCell.Tab.2.left" timestamp="1623323166330">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1276" height="453" key="GridCell.Tab.2.left/0.0.1493.933@0.0.1493.933" timestamp="1621437652381" />
-    <state width="1276" height="453" key="GridCell.Tab.2.right" timestamp="1621437652382">
+    <state width="1186" height="334" key="GridCell.Tab.2.left/0.0.1493.933@0.0.1493.933" timestamp="1623323166330" />
+    <state width="1186" height="334" key="GridCell.Tab.2.right" timestamp="1623323166330">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state width="1276" height="453" key="GridCell.Tab.2.right/0.0.1493.933@0.0.1493.933" timestamp="1621437652382" />
+    <state width="1186" height="334" key="GridCell.Tab.2.right/0.0.1493.933@0.0.1493.933" timestamp="1623323166330" />
     <state x="278" y="123" key="Maven.ArtifactSearchDialog" timestamp="1621335855446">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
     <state x="278" y="123" key="Maven.ArtifactSearchDialog/0.0.1493.933@0.0.1493.933" timestamp="1621335855446" />
-    <state x="249" y="110" key="SettingsEditor" timestamp="1621432613568">
+    <state x="249" y="84" key="SettingsEditor" timestamp="1623505833724">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
-    <state x="249" y="110" key="SettingsEditor/0.0.1493.933@0.0.1493.933" timestamp="1621432613568" />
+    <state x="249" y="84" key="SettingsEditor/0.0.1493.933@0.0.1493.933" timestamp="1623505833724" />
     <state x="261" y="181" key="new project wizard" timestamp="1621430087520">
       <screen x="0" y="0" width="1493" height="933" />
     </state>
     <state x="261" y="181" key="new project wizard/0.0.1493.933@0.0.1493.933" timestamp="1621430087520" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/med-system/system-web/src/main/java/com/sky/controller/system/LoginController.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

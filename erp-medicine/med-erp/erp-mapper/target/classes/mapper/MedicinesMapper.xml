@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.MedicinesMapper">
+    <resultMap id="BaseResultMap" type="com.sky.domain.Medicines">
+        <!--@mbg.generated-->
+        <!--@Table stock_medicines-->
+        <id column="medicines_id" jdbcType="BIGINT" property="medicinesId"/>
+        <result column="medicines_number" jdbcType="VARCHAR" property="medicinesNumber"/>
+        <result column="medicines_name" jdbcType="VARCHAR" property="medicinesName"/>
+        <result column="medicines_type" jdbcType="CHAR" property="medicinesType"/>
+        <result column="prescription_type" jdbcType="CHAR" property="prescriptionType"/>
+        <result column="prescription_price" jdbcType="DECIMAL" property="prescriptionPrice"/>
+        <result column="unit" jdbcType="VARCHAR" property="unit"/>
+        <result column="conversion" jdbcType="INTEGER" property="conversion"/>
+        <result column="keywords" jdbcType="VARCHAR" property="keywords"/>
+        <result column="producer_id" jdbcType="VARCHAR" property="producerId"/>
+        <result column="status" jdbcType="CHAR" property="status"/>
+        <result column="medicines_stock_num" jdbcType="DECIMAL" property="medicinesStockNum"/>
+        <result column="medicines_stock_danger_num" jdbcType="DECIMAL" property="medicinesStockDangerNum"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+        <result column="del_flag" jdbcType="CHAR" property="delFlag"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        medicines_id, medicines_number, medicines_name, medicines_type, prescription_type,
+        prescription_price, unit, `conversion`, keywords, producer_id, `status`, medicines_stock_num,
+        medicines_stock_danger_num, create_time, update_time, create_by, update_by, del_flag
+    </sql>
+</mapper>

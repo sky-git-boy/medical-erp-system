@@ -6,16 +6,32 @@
         <option name="generateService" value="true" />
         <option name="generateServiceInterface" value="true" />
         <option name="javaMapperPackage" value="com.sky.mapper" />
-        <option name="javaMapperPath" value="D:\MedicineERP\erp-medicine\med-system\system-mapper\src\main\java" />
+        <option name="javaMapperPath" value="D:\MedicineERP\erp-medicine\med-erp\erp-mapper\src\main\java" />
         <option name="javaModelPackage" value="com.sky.domain" />
-        <option name="javaModelPath" value="D:\MedicineERP\erp-medicine\med-system\system-domain\src\main\java" />
-        <option name="lastDatabaseCrudChooseModuleName" value="med-commons" />
+        <option name="javaModelPath" value="D:\MedicineERP\erp-medicine\med-erp\erp-domain\src\main\java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="erp-service" />
         <option name="lombokAllArgConstructor" value="true" />
         <option name="lombokDataAnnotation" value="true" />
         <option name="lombokNoArgsConstructor" value="true" />
         <option name="modelSuperClass" value="com.sky.domain.BaseEntity" />
         <option name="moduleNameToPackageAndPathMap">
           <map>
+            <entry key="erp-service">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.sky.mapper" />
+                  <option name="javaMapperPath" value="D:\MedicineERP\erp-medicine\med-erp\erp-mapper\src\main\java" />
+                  <option name="javaModelPacakge" value="com.sky.domain" />
+                  <option name="javaModelPath" value="D:\MedicineERP\erp-medicine\med-erp\erp-domain\src\main\java" />
+                  <option name="javaServiceInterfacePackage" value="com.sky.service" />
+                  <option name="javaServiceInterfacePath" value="D:\MedicineERP\erp-medicine\med-erp\erp-api\src\main\java" />
+                  <option name="javaServicePackage" value="com.sky.service.impl" />
+                  <option name="javaServicePath" value="D:\MedicineERP\erp-medicine\med-erp\erp-service\src\main\java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="D:\MedicineERP\erp-medicine\med-erp\erp-mapper\src\main\resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
             <entry key="med-commons">
               <value>
                 <UserPackageAndPathInfoByModule>
@@ -35,9 +51,33 @@
           </map>
         </option>
         <option name="p3CComment" value="true" />
-        <option name="removeTablePreName" value="sys_" />
+        <option name="removeTablePreName" value="stock_" />
         <option name="tableGenerateConfigs">
           <map>
+            <entry key="medicine-erp:stock_medicines">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="medicines_id" />
+                  <option name="javaModelName" value="Medicines" />
+                  <option name="moduleName" value="erp-service" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="medicine-erp:stock_producer">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="producer_id" />
+                  <option name="javaModelName" value="Producer" />
+                  <option name="moduleName" value="erp-service" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="medicine-erp:sys_menu">
               <value>
                 <TableGenerateConfig>
@@ -67,7 +107,7 @@
         <option name="useSwagger" value="true" />
         <option name="userMybatisPlus" value="true" />
         <option name="xmlMapperPackage" value="mapper" />
-        <option name="xmlMapperPath" value="D:\MedicineERP\erp-medicine\med-system\system-mapper\src\main\resources" />
+        <option name="xmlMapperPath" value="D:\MedicineERP\erp-medicine\med-erp\erp-mapper\src\main\resources" />
       </ProjectProfile>
     </option>
   </component>
