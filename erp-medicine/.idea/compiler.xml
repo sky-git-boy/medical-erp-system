@@ -16,14 +16,14 @@
         <module name="statistics-service" />
         <module name="statistics-api" />
         <module name="system-api" />
-        <module name="erp-api" />
+        <module name="system-service" />
         <module name="statistics-mapper" />
         <module name="system-domain" />
         <module name="statistics-domain" />
         <module name="med-commons" />
         <module name="system-web" />
         <module name="doctor-service" />
-        <module name="system-service" />
+        <module name="erp-api" />
         <module name="erp-service" />
       </profile>
     </annotationProcessing>

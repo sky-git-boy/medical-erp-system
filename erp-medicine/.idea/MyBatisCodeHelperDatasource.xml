@@ -3,8 +3,6 @@
   <component name="MyBatisCodeHelperDatasource">
     <option name="projectProfile">
       <ProjectProfile>
-        <option name="generateService" value="true" />
-        <option name="generateServiceInterface" value="true" />
         <option name="javaMapperPackage" value="com.sky.mapper" />
         <option name="javaMapperPath" value="D:\MedicineERP\erp-medicine\med-erp\erp-mapper\src\main\java" />
         <option name="javaModelPackage" value="com.sky.domain" />
@@ -23,10 +21,6 @@
                   <option name="javaMapperPath" value="D:\MedicineERP\erp-medicine\med-erp\erp-mapper\src\main\java" />
                   <option name="javaModelPacakge" value="com.sky.domain" />
                   <option name="javaModelPath" value="D:\MedicineERP\erp-medicine\med-erp\erp-domain\src\main\java" />
-                  <option name="javaServiceInterfacePackage" value="com.sky.service" />
-                  <option name="javaServiceInterfacePath" value="D:\MedicineERP\erp-medicine\med-erp\erp-api\src\main\java" />
-                  <option name="javaServicePackage" value="com.sky.service.impl" />
-                  <option name="javaServicePath" value="D:\MedicineERP\erp-medicine\med-erp\erp-service\src\main\java" />
                   <option name="xmlPackage" value="mapper" />
                   <option name="xmlPath" value="D:\MedicineERP\erp-medicine\med-erp\erp-mapper\src\main\resources" />
                 </UserPackageAndPathInfoByModule>
@@ -83,6 +77,30 @@
                 <TableGenerateConfig>
                   <option name="generatedKey" value="provider_id" />
                   <option name="javaModelName" value="Provider" />
+                  <option name="moduleName" value="erp-service" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="medicine-erp:stock_purchase">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="Purchase" />
+                  <option name="moduleName" value="erp-service" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="medicine-erp:stock_purchase_item">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="PurchaseItem" />
                   <option name="moduleName" value="erp-service" />
                   <option name="sequenceColumn" value="" />
                   <option name="sequenceId" value="" />

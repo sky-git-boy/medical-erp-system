@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.PurchaseMapper">
+    <resultMap id="BaseResultMap" type="com.sky.domain.Purchase">
+        <!--@mbg.generated-->
+        <!--@Table stock_purchase-->
+        <id column="purchase_id" jdbcType="VARCHAR" property="purchaseId"/>
+        <result column="provider_id" jdbcType="VARCHAR" property="providerId"/>
+        <result column="purchase_trade_total_amount" jdbcType="DECIMAL" property="purchaseTradeTotalAmount"/>
+        <result column="status" jdbcType="CHAR" property="status"/>
+        <result column="apply_user_id" jdbcType="BIGINT" property="applyUserId"/>
+        <result column="apply_user_name" jdbcType="VARCHAR" property="applyUserName"/>
+        <result column="storage_opt_user" jdbcType="VARCHAR" property="storageOptUser"/>
+        <result column="storage_opt_time" jdbcType="TIMESTAMP" property="storageOptTime"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+        <result column="examine" jdbcType="VARCHAR" property="examine"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        purchase_id, provider_id, purchase_trade_total_amount, `status`, apply_user_id, apply_user_name,
+        storage_opt_user, storage_opt_time, create_time, update_time, create_by, update_by,
+        examine
+    </sql>
+</mapper>
