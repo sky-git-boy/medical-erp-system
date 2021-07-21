@@ -7,6 +7,7 @@ import com.sky.constants.Constants;
 import com.sky.domain.Purchase;
 import com.sky.domain.PurchaseItem;
 import com.sky.dto.PurchaseDto;
+import com.sky.dto.PurchaseFormDto;
 import com.sky.service.PurchaseService;
 import com.sky.utils.IdGeneratorSnowflake;
 import com.sky.utils.ShiroSecurityUtils;
@@ -121,4 +122,89 @@ public class PurchaseController {
         return AjaxResult.success(list);
     }
 
+    /**
+     * 生成单据号
+     */
+    @GetMapping("generatePurchaseId")
+    public AjaxResult generatePurchaseId() {
+        return AjaxResult.success(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PROFIX_CG));
+    }
+
+    /**
+     * 暂存采购数据和详情
+     */
+    @PostMapping("addPurchase")
+    @Log(title = "采购单管理--暂存采购单位和详情数据", businessType = BusinessType.INSERT)
+    public AjaxResult addPurchase(@RequestBody PurchaseFormDto purchaseFormDto) {
+        // 判断当前采购单的状态
+        if (!checkPurchase(purchaseFormDto)) {
+            return AjaxResult.fail("当前单据状态不是【未提交】或【审核失败】状态，不能进行修改");
+        }
+        purchaseFormDto.getPurchaseDto().setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
+        return AjaxResult.toAjax(this.purchaseService.addPurchaseAndItem(purchaseFormDto));
+    }
+
+    /**
+     * 保存并提交审核采购单数据和详情
+     */
+    @PostMapping("addPurchaseToAudit")
+    @Log(title = "采购单管理--添加并提交审核采购单位和详情数据", businessType = BusinessType.INSERT)
+    public AjaxResult addPurchaseToAudit(@RequestBody PurchaseFormDto purchaseFormDto) {
+        //判断当前采购单的状态
+        if (!checkPurchase(purchaseFormDto)) {
+            return AjaxResult.fail("当前单据状态不是【未提交】或【审核失败】状态，不能进行修改");
+        }
+        purchaseFormDto.getPurchaseDto().setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
+        return AjaxResult.toAjax(this.purchaseService.addPurchaseAndItemToAudit(purchaseFormDto));
+    }
+
+
+    /**
+     * 公共验证采购单的方法
+     */
+    private boolean checkPurchase(PurchaseFormDto purchaseFormDto) {
+        String purchaseId = purchaseFormDto.getPurchaseDto().getPurchaseId();
+        Purchase purchase = this.purchaseService.getPurchaseById(purchaseId);
+        //判断ID在数据库里面是否存在，如果存在，说明是再次暂存
+        if (null == purchase) {
+            return true;
+        }
+        return purchase.getStatus().equals(Constants.STOCK_PURCHASE_STATUS_1)
+                || purchase.getStatus().equals(Constants.STOCK_PURCHASE_STATUS_4);
+    }
+
+    /**
+     * 根据采购单号查询采购单信息和详情信息
+     */
+    @GetMapping("queryPurchaseAndItemByPurchaseId/{purchaseId}")
+    public AjaxResult queryPurchaseAndItemByPurchaseId(@PathVariable String purchaseId) {
+        Purchase purchase = this.purchaseService.getPurchaseById(purchaseId);
+        if (null == purchase) {
+            return AjaxResult.fail("单据号【" + purchaseId + "】不存在");
+        } else {
+            //查询详情
+            List<PurchaseItem> items = this.purchaseService.getPurchaseItemById(purchaseId);
+            Map<String, Object> res = new HashMap<>();
+            res.put("purchase", purchase);
+            res.put("items", items);
+            return AjaxResult.success(res);
+        }
+    }
+
+    /**
+     * 入库
+     */
+    @PostMapping("doInventory/{purchaseId}")
+    @Log(title = "采购单管理--入库", businessType = BusinessType.UPDATE)
+    public AjaxResult doInventory(@PathVariable String purchaseId) {
+        Purchase purchase = this.purchaseService.getPurchaseById(purchaseId);
+        if (purchase.getStatus().equals(Constants.STOCK_PURCHASE_STATUS_3)) {
+            //进行入库
+            return AjaxResult.toAjax(this.purchaseService.doInventory(purchaseId, ShiroSecurityUtils.getCurrentSimpleUser()));
+        } else if (purchase.getStatus().equals(Constants.STOCK_PURCHASE_STATUS_6)) {
+            return AjaxResult.fail("采购单【" + purchaseId + "】已入库，不能重复入库");
+        } else {
+            return AjaxResult.fail("采购单【" + purchaseId + "】没有审核通过，不能入库");
+        }
+    }
 }

@@ -4,6 +4,7 @@ import com.sky.domain.Purchase;
 import com.sky.domain.PurchaseItem;
 import com.sky.domain.SimpleUser;
 import com.sky.dto.PurchaseDto;
+import com.sky.dto.PurchaseFormDto;
 import com.sky.vo.DataGridView;
 
 import java.util.List;
@@ -48,5 +49,20 @@ public interface PurchaseService {
      * 根据ID查询一个采购信息详情
      */
     List<PurchaseItem> getPurchaseItemById(String purchaseId);
-    
+
+    /**
+     * 暂存采购单数据和详情
+     */
+    int addPurchaseAndItem(PurchaseFormDto purchaseFormDto);
+
+    /**
+     * 保存并提交审核采购单数据和详情
+     */
+    int addPurchaseAndItemToAudit(PurchaseFormDto purchaseFormDto);
+
+    /**
+     * 保存并提交审核采购单数据和详情
+     */
+    int doInventory(String purchaseId, SimpleUser currentSimpleUser);
+
 }
