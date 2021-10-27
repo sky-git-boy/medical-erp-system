@@ -22,7 +22,7 @@ export function updateUser(data) {
     url: '/system/user/updateUser',
     method: 'put',
     params: data
-  })  
+  })
 }
 // 删除
 export function deleteUserByIds(id) {

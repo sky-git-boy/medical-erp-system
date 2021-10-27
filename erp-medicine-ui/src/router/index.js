@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Vue from 'vue'
 import Router from 'vue-router'
 Vue.use(Router)
@@ -7,17 +8,14 @@ import Layout from '@/layout'
 /**
  * constantRoutes 常量路由，这些路由由后台的数据控制是否显示
  */
-export const constantRoutes = [
-  {
+export const constantRoutes = [{
     path: '/redirect',
     component: Layout,
     hidden: true,
-    children: [
-      {
-        path: '/redirect/:path*',
-        component: () => import('@/views/redirect/index')
-      }
-    ]
+    children: [{
+      path: '/redirect/:path*',
+      component: () => import('@/views/redirect/index')
+    }]
   },
   {
     path: '/login',
@@ -43,33 +41,19 @@ export const constantRoutes = [
     path: '/',
     component: Layout,
     redirect: '/dashboard',
-    children: [
-      {
-        path: 'dashboard',
-        component: () => import('@/views/dashboard/index'),
-        name: '首页',
-        meta: { title: '首页', icon: 'dashboard', affix: true }
+    children: [{
+      path: 'dashboard',
+      component: () => import('@/views/dashboard/index'),
+      name: '首页',
+      meta: {
+        title: '首页',
+        icon: 'dashboard',
+        affix: true
       }
-    ]
-  },
-  {
-    path: '/profile',
-    component: Layout,
-    redirect: '/profile/index',
-    hidden: true,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/profile/index'),
-        name: 'Profile',
-        meta: { title: '个人信息', icon: 'user', noCache: true }
-      }
-    ]
+    }]
   }
 ]
-// 异步路由
-export const asyncRoutes = [
-  {
+export const asyncRoutes = [{
     path: '/system',
     component: Layout,
     redirect: 'noRedirect',
@@ -79,8 +63,7 @@ export const asyncRoutes = [
       title: '系统管理',
       icon: 'lock'
     },
-    children: [
-      {
+    children: [{
         path: 'dept',
         component: () => import('@/views/system/dept/index'),
         name: '/system/dept',
@@ -91,7 +74,7 @@ export const asyncRoutes = [
       },
       {
         path: 'user',
-        component: () => import('@/views/error-page/404'),
+        component: () => import('@/views/system/user/index'),
         name: '/system/user',
         meta: {
           title: '用户管理',
@@ -100,7 +83,7 @@ export const asyncRoutes = [
       },
       {
         path: 'role',
-        component: () => import('@/views/error-page/404'),
+        component: () => import('@/views/system/role/index'),
         name: '/system/role',
         meta: {
           title: '角色管理',
@@ -130,7 +113,7 @@ export const asyncRoutes = [
         component: () => import('@/views/system/notice/index'),
         name: '/system/notice',
         meta: {
-          title: '通知公告',
+          title: '通知公告', 
           icon: 'theme'
         }
       },
@@ -151,61 +134,6 @@ export const asyncRoutes = [
           title: '操作日志管理',
           icon: 'clipboard'
         }
-      },
-      {
-        path: 'ins_fee',
-        component: () => import('@/views/system/checkItem/index'),
-        name: '/system/ins_fee',
-        meta: {
-          title: '检查费用设置',
-          icon: 'international'
-        }
-      },
-      {
-        path: 'reg_fee',
-        component: () => import('@/views/system/registeredItem/index'),
-        name: '/system/reg_fee',
-        meta: {
-          title: '挂号费用设置',
-          icon: 'international'
-        }
-      }
-    ]
-  },
-  {
-    path: '/statistics',
-    component: Layout,
-    redirect: 'noRedirect',
-    name: '/statistics',
-    meta: {
-      title: '数据统计',
-      icon: 'example'
-    },
-    children: [
-      {
-        path: 'revenue',
-        component: () => import('@/views/error-page/404'),
-        name: '/statistics/revenue',
-        meta: { title: '收支统计', icon: 'edit' }
-      },
-      {
-        path: 'sales',
-        component: () => import('@/views/error-page/404'),
-        name: '/statistics/sales',
-        meta: { title: '药品销售统计', icon: 'list' },
-        hidden: true
-      },
-      {
-        path: 'check',
-        component: () => import('@/views/error-page/404'),
-        name: '/statistics/check',
-        meta: { title: '检查项目统计', icon: 'list' }
-      },
-      {
-        path: 'workload',
-        component: () => import('@/views/error-page/404'),
-        name: '/statistics/workload',
-        meta: { title: '工作量统计', icon: 'list' }
       }
     ]
   },
@@ -216,207 +144,114 @@ export const asyncRoutes = [
     name: '/stock',
     meta: {
       title: '药品进销存',
-      icon: 'star'
+      icon: '404'
     },
-    children: [
-      {
+    children: [{
         path: 'producter',
-        component: () => import('@/views/error-page/404'),
+        component: () => import('@/views/erp/producer/index'),
         name: '/stock/producter',
-        meta: { title: '生产厂家维护', icon: 'list' }
+        meta: {
+          title: '生产厂家维护',
+          icon: 'list'
+        }
       },
       {
         path: 'medicinal',
-        component: () => import('@/views/error-page/404'),
+        component: () => import('@/views/erp/medicines/index'),
         name: '/stock/medicinal',
-        meta: { title: '药品信息维护', icon: 'list' }
+        meta: {
+          title: '药品信息维护',
+          icon: 'list'
+        }
       },
       {
         path: 'provider',
-        component: () => import('@/views/error-page/404'),
+        component: () => import('@/views/erp/provider/index'),
         name: '/stock/provider',
-        meta: { title: '供应商维护', icon: 'list' }
+        meta: {
+          title: '供应商维护',
+          icon: 'list'
+        }
       },
       {
         path: 'purchase',
-        component: () => import('@/views/error-page/404'),
+        component: () => import('@/views/erp/purchase/index'),
         name: '/stock/purchase',
-        meta: { title: '采购入库列表', icon: 'list' }
+        meta: {
+          title: '采购入库列表',
+          icon: 'list'
+        }
       },
       {
         path: 'examine',
-        component: () => import('@/views/error-page/404'),
+        component: () => import('@/views/erp/purchase/auditList'),
         name: '/stock/examine',
-        meta: { title: '入库审核', icon: 'list' }
+        meta: {
+          title: '入库审核',
+          icon: 'list'
+        }
       },
       {
         path: 'inventory',
-        component: () => import('@/views/error-page/404'),
+        component: () => import('@/views/erp/inventoryLog/index'),
         name: '/stock/inventory',
-        meta: { title: '库存查询', icon: 'list' }
-      }
-    ]
-  },
-  {
-    path: '/charge',
-    component: Layout,
-    redirect: 'noRedirect',
-    name: '/charge',
-    meta: {
-      title: '收费管理',
-      icon: 'excel'
-    },
-    children: [
-      {
-        path: 'charge',
-        component: () => import('@/views/error-page/404'),
-        name: '/charge/docharge',
-        meta: { title: '处方收费', icon: 'list' }
-      },
-      {
-        path: 'chargelist',
-        component: () => import('@/views/error-page/404'),
-        name: '/charge/chargelist',
-        meta: { title: '收费查询', icon: 'list' }
-      },
-      {
-        path: 'backfee',
-        component: () => import('@/views/error-page/404'),
-        name: '/charge/backfee',
-        meta: { title: '处方退费', icon: 'list' }
-      },
-      {
-        path: 'backfeelist',
-        component: () => import('@/views/error-page/404'),
-        name: '/charge/backfeelist',
-        meta: { title: '退费查询', icon: 'list' }
-      },
-      {
-        path: 'dispensing',
-        component: () => import('@/views/error-page/404'),
-        name: '/charge/dispensing',
-        meta: { title: '处方发药', icon: 'list' }
-      }
-    ]
-  },
-  {
-    path: '/check',
-    component: Layout,
-    redirect: 'noRedirect',
-    name: '/check',
-    meta: {
-      title: '检查管理',
-      icon: 'excel'
-    },
-    children: [
-      {
-        path: 'docheck',
-        component: () => import('@/views/error-page/404'),
-        name: '/check/docheck',
-        meta: { title: '新开检查', icon: 'list' }
-      },
-      {
-        path: 'checkresult',
-        component: () => import('@/views/error-page/404'),
-        name: '/check/checkresult',
-        meta: { title: '检查结果录入', icon: 'list' }
-      },
-      {
-        path: 'checklist',
-        component: () => import('@/views/error-page/404'),
-        name: '/check/checklist',
-        meta: { title: '检查结果查询', icon: 'list' }
-      }
-    ]
-  },
-  {
-    path: '/doctor',
-    component: Layout,
-    redirect: 'noRedirect',
-    name: '/doctor',
-    meta: {
-      title: '看病就诊',
-      icon: 'excel'
-    },
-    children: [
-      {
-        path: 'registered',
-        component: () => import('@/views/error-page/404'),
-        name: '/doctor/registered',
-        meta: { title: '门诊挂号', icon: 'list' }
-      },
-      {
-        path: 'registeredlist',
-        component: () => import('@/views/error-page/404'),
-        name: '/doctor/registeredlist',
-        meta: { title: '挂号列表', icon: 'list' }
-      },
-      {
-        path: 'newcare',
-        component: () => import('@/views/error-page/404'),
-        name: '/doctor/newcare',
-        meta: { title: '新开就诊', icon: 'list' }
-      },
-      {
-        path: 'myscheduling',
-        component: () => import('@/views/error-page/404'),
-        name: '/doctor/myscheduling',
-        meta: { title: '我的排班', icon: 'list' }
-      },
-      {
-        path: 'scheduling',
-        component: () => import('@/views/error-page/404'),
-        name: '/doctor/scheduling',
-        meta: { title: '医生排班', icon: 'list' }
-      },
-      {
-        path: 'patient',
-        component: () => import('@/views/error-page/404'),
-        name: '/doctor/patient',
-        meta: { title: '患者库', icon: 'list' }
+        meta: {
+          title: '库存查询',
+          icon: 'list'
+        }
       }
     ]
   }
 ]
-export const lastRoute = [
-  {
+export const lastRoute = [{
     path: '/dict',
     component: Layout,
     hidden: true,
-    children: [
-      {
-        path: 'data/:dictId(\\d+)',
-        component: () => import('@/views/system/dict/data'),
-        name: 'data',
-        meta: { title: '数据字典', icon: 'list' }
+    children: [{
+      path: 'data/:dictId(\\d+)',
+      component: () => import('@/views/system/dict/data'),
+      name: '/dict',
+      meta: {
+        title: '数据字典'
       }
-    ]
+    }]
   },
   {
-    path: '/stock/purchase',
+    path: '/erp/purchase',
     component: Layout,
     hidden: true,
-    children: [
-      {
-        path: 'insert',
-        component: () => import('@/views/error-page/404'),
-        name: '/stock/purchase/insert',
-        meta: { title: '采购入库', icon: 'list' }
+    children: [{
+        path: 'newPurchase',
+        component: () => import('@/views/erp/purchase/newPurchase'),
+        name: '/erp/purchase/newPurchase',
+        meta: {
+          title: '新增采购',
+          icon: 'list'
+        }
       },
       {
-        path: 'update/:purchaseId',
-        component: () => import('@/views/error-page/404'),
-        name: '/stock/purchase/update',
-        meta: { title: '采购入库修改', icon: 'list' }
+        path: 'editPurchase/:purchaseId',
+        component: () => import('@/views/erp/purchase/editPurchase'),
+        name: '/erp/purchase/editPurchase',
+        meta: {
+          title: '采购入库修改',
+          icon: 'list'
+        }
       }
     ]
   },
   // 404 page must be placed at the end !!!
-  { path: '*', redirect: '/404', hidden: true }
+  {
+    path: '*',
+    redirect: '/404',
+    hidden: true
+  }
 ]
 const createRouter = () => new Router({
   // mode: 'history', // require service support
-  scrollBehavior: () => ({ y: 0 }),
+  scrollBehavior: () => ({
+    y: 0
+  }),
   // 初始化时将所有路由都加载上，否则会出现刷新页面404的情况
   routes: constantRoutes
 })

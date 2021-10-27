@@ -32,7 +32,7 @@
           <el-option
             v-for="dict in statusOptions"
             :key="dict.dictValue"
-            :label="dic.dictLabel"
+            :label="dict.dictLabel"
             :value="dict.dictValue"
           />
         </el-select>
@@ -65,7 +65,7 @@
         <el-button type="success" icon="el-icon-update" size="mini" :disabled="single" @click="handleUpdate">修改</el-button>
       </el-col>
       <el-col :span="1.5">
-        <el-button type="danger" icon="el-icon-delete" size="mini" :disabled="mutiple" @click="handleDelete">删除</el-button>
+        <el-button type="danger" icon="el-icon-delete" size="mini" :disabled="multiple" @click="handleDelete">删除</el-button>
       </el-col>
       <el-col :span="1.5">
         <el-button type="warning" icon="el-icon-thumb" size="mini" :disabled="single" @click="handleSelectMenu">分配权限</el-button>
@@ -90,7 +90,7 @@
           <el-button type="text" icon="el-icon-thumb" size="mini" @click="handleSelectMenu(scope.row)">分配权限</el-button>
         </template>
       </el-table-column>
-    </el-table> 
+    </el-table>
     <!-- 数据表格结束 -->
 
     <!-- 分页控件开始 -->
@@ -172,7 +172,7 @@
 </template>
 
 <script>
-import { listRoleForPage, addRole, updateRole, deleteRoleByIds, getRoleById, getRoleIdsByUserId, saveRoleMenu } from '@/api/system/role'
+import { listRoleForPage, addRole, updateRole, deleteRoleByIds, getRoleById, saveRoleMenu } from '@/api/system/role'
 import { selectMenuTree, getMenuIdsByRoleId } from '@/api/system/menu'
 export default {
   // 定义页面数据
