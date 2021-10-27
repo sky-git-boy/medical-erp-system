@@ -1,5 +1,6 @@
 package com.sky.service;
 
+
 import com.sky.domain.Medicines;
 import com.sky.dto.MedicinesDto;
 import com.sky.vo.DataGridView;
@@ -8,9 +9,10 @@ import java.util.List;
 
 /**
  * @author sky
- * @create 2021-06-14 20:33
+ * @create 2021-6-11 16:24
  */
 public interface MedicinesService {
+
     /**
      * 分页查询
      */
@@ -19,7 +21,7 @@ public interface MedicinesService {
     /**
      * 根据ID查询
      */
-    Medicines getOne(Long medicinesId);
+    Medicines getOne(Long MedicinesId);
 
     /**
      * 添加
@@ -44,5 +46,11 @@ public interface MedicinesService {
     /**
      * 调整库存
      */
-    int updateMedicinesStorage(Long medicinesId,Long medicinesStockNum);
+    int updateMedicinesStorage(Long medicinesId, Long medicinesStockNum);
+
+    /**
+     * 发药
+     */
+    int deductionMedicinesStorage(Long medicinesId, long num);
 }
+

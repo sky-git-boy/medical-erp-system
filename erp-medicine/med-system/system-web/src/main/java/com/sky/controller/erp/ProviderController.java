@@ -3,6 +3,7 @@ package com.sky.controller.erp;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.sky.aspectj.annotation.Log;
 import com.sky.aspectj.enums.BusinessType;
+import com.sky.controller.BaseController;
 import com.sky.dto.ProviderDto;
 import com.sky.service.ProviderService;
 import com.sky.utils.ShiroSecurityUtils;
@@ -16,13 +17,15 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 /**
+ * 消费者
  * @author sky
- * @create 2021-06-14 21:57
+ * @create 2021-05-25 10:01
  */
 @RestController
 @RequestMapping("erp/provider")
-public class ProviderController {
-    @Reference
+public class ProviderController extends BaseController {
+
+    @Reference //使用 dubbo 的引用
     private ProviderService providerService;
 
     /**
@@ -34,6 +37,7 @@ public class ProviderController {
         DataGridView gridView = this.providerService.listProviderPage(providerDto);
         return AjaxResult.success("查询成功",gridView.getData(),gridView.getTotal());
     }
+
     /**
      * 添加
      */
@@ -55,7 +59,6 @@ public class ProviderController {
         providerDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.providerService.updateProvider(providerDto));
     }
-
 
     /**
      * 根据ID查询一个供应商信息
@@ -79,9 +82,10 @@ public class ProviderController {
     /**
      * 查询所有可用的供应商
      */
-    @HystrixCommand
     @GetMapping("selectAllProvider")
+    @HystrixCommand
     public AjaxResult selectAllProvider() {
         return AjaxResult.success(this.providerService.selectAllProvider());
     }
+
 }

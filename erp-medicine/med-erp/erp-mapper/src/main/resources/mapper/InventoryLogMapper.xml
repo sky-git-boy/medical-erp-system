@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sky.mapper.InventoryLogMapper">
-    <resultMap id="BaseResultMap" type="com.sky.domain.InventoryLog">
-        <!--@mbg.generated-->
-        <!--@Table stock_inventory_log-->
-        <id column="inventory_log_id" jdbcType="VARCHAR" property="inventoryLogId"/>
-        <result column="purchase_id" jdbcType="VARCHAR" property="purchaseId"/>
-        <result column="medicines_id" jdbcType="BIGINT" property="medicinesId"/>
-        <result column="inventory_log_num" jdbcType="INTEGER" property="inventoryLogNum"/>
-        <result column="trade_price" jdbcType="DECIMAL" property="tradePrice"/>
-        <result column="prescription_price" jdbcType="DECIMAL" property="prescriptionPrice"/>
-        <result column="trade_total_amount" jdbcType="DECIMAL" property="tradeTotalAmount"/>
-        <result column="prescription_total_amount" jdbcType="DECIMAL" property="prescriptionTotalAmount"/>
-        <result column="batch_number" jdbcType="VARCHAR" property="batchNumber"/>
-        <result column="medicines_name" jdbcType="VARCHAR" property="medicinesName"/>
-        <result column="medicines_type" jdbcType="CHAR" property="medicinesType"/>
-        <result column="prescription_type" jdbcType="CHAR" property="prescriptionType"/>
-        <result column="producer_id" jdbcType="BIGINT" property="producerId"/>
-        <result column="conversion" jdbcType="INTEGER" property="conversion"/>
-        <result column="unit" jdbcType="VARCHAR" property="unit"/>
-        <result column="provider_id" jdbcType="BIGINT" property="providerId"/>
-        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
-        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
-    </resultMap>
-    <sql id="Base_Column_List">
-        <!--@mbg.generated-->
-        inventory_log_id, purchase_id, medicines_id, inventory_log_num, trade_price, prescription_price,
-        trade_total_amount, prescription_total_amount, batch_number, medicines_name, medicines_type,
-        prescription_type, producer_id, `conversion`, unit, provider_id, create_time, create_by
-    </sql>
+  <resultMap id="BaseResultMap" type="com.sky.domain.InventoryLog">
+    <!--@mbg.generated-->
+    <!--@Table stock_inventory_log-->
+    <id column="inventory_log_id" jdbcType="VARCHAR" property="inventoryLogId" />
+    <result column="purchase_id" jdbcType="VARCHAR" property="purchaseId" />
+    <result column="medicines_id" jdbcType="VARCHAR" property="medicinesId" />
+    <result column="inventory_log_num" jdbcType="INTEGER" property="inventoryLogNum" />
+    <result column="trade_price" jdbcType="DECIMAL" property="tradePrice" />
+    <result column="prescription_price" jdbcType="DECIMAL" property="prescriptionPrice" />
+    <result column="trade_total_amount" jdbcType="DECIMAL" property="tradeTotalAmount" />
+    <result column="prescription_total_amount" jdbcType="DECIMAL" property="prescriptionTotalAmount" />
+    <result column="batch_number" jdbcType="VARCHAR" property="batchNumber" />
+    <result column="medicines_name" jdbcType="VARCHAR" property="medicinesName" />
+    <result column="medicines_type" jdbcType="CHAR" property="medicinesType" />
+    <result column="prescription_type" jdbcType="CHAR" property="prescriptionType" />
+    <result column="producer_id" jdbcType="VARCHAR" property="producerId" />
+    <result column="conversion" jdbcType="INTEGER" property="conversion" />
+    <result column="unit" jdbcType="VARCHAR" property="unit" />
+    <result column="provider_id" jdbcType="VARCHAR" property="providerId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    inventory_log_id, purchase_id, medicines_id, inventory_log_num, trade_price, prescription_price, 
+    trade_total_amount, prescription_total_amount, batch_number, medicines_name, medicines_type, 
+    prescription_type, producer_id, `conversion`, unit, provider_id, create_time, create_by
+  </sql>
 </mapper>

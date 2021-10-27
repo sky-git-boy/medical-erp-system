@@ -1,16 +1,8 @@
 package com.sky.dto;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.sky.domain.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -18,15 +10,13 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
+ * 入库订单明细表
  * @author sky
- * @create 2021-06-15 8:55
+ * @create 2020-11-12 17:28
  */
 @ApiModel(value = "com-sky-dto-PurchaseItemDto")
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class PurchaseItemDto implements Serializable {
-
     /**
      * 采购单据ID
      */

@@ -27,7 +27,7 @@ spring:
   #配置redis
   redis:
     port: 6390
-    host: 192.168.36.128
+    host: 192.168.36.134
     password: 123456
   mvc:
     date-format: yyyy-MM-dd HH:mm:ss
@@ -62,7 +62,7 @@ fdfs:
   tracker-list:          # tracker服务配置地址列表
     - 192.168.36.128:22122
 upload:
-  base-url: http://192.168.36.128:8888
+  base-url: http://192.168.36.134:8888
   allow-types:
     - image/jpeg
     - image/png
@@ -72,7 +72,7 @@ dubbo:
   application:
     name: med-system-web-service
   registry:
-    address: zookeeper://192.168.36.128:2181
+    address: zookeeper://192.168.36.134:2181
   consumer:
     check: false
   config-center:

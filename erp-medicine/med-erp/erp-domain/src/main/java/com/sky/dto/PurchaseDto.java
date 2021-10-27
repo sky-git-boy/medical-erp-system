@@ -1,16 +1,8 @@
 package com.sky.dto;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.sky.domain.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -19,15 +11,11 @@ import java.util.Date;
 
 /**
  * @author sky
- * @create 2021-06-15 8:43
+ * @create 2020-11-12 16:39
  */
 @ApiModel(value = "com-sky-dto-PurchaseDto")
 @Data
-@EqualsAndHashCode(callSuper = true)
-@AllArgsConstructor
-@NoArgsConstructor
 public class PurchaseDto extends BaseDto {
-
     /**
      * 制单号ID 全局ID雪花算法
      */
@@ -45,14 +33,13 @@ public class PurchaseDto extends BaseDto {
     /**
      * 采购批发总额
      */
-    @NotNull(message = "采购批发总额不能为空")
     @ApiModelProperty(value = "采购批发总额")
+    @NotNull(message = "采购批发总额不能为空")
     private BigDecimal purchaseTradeTotalAmount;
 
     /**
      * 单据状态； 1未提交2待审核 3审核通过 4审核失败 5作废 6入库成功 字典表 his_order_status
      */
-    @NotBlank(message = "单据状态不能为空")
     @ApiModelProperty(value = "单据状态； 1未提交2待审核 3审核通过 4审核失败 5作废 6入库成功 字典表 his_order_status")
     private String status;
 
@@ -79,5 +66,11 @@ public class PurchaseDto extends BaseDto {
      */
     @ApiModelProperty(value = "入库操作时间")
     private Date storageOptTime;
+
+    /**
+     * 审核信息
+     */
+    @ApiModelProperty(value = "审核信息")
+    private String examine;
 
 }

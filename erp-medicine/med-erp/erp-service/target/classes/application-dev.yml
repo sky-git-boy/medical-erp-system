@@ -34,7 +34,7 @@ dubbo:
   application:
     name: med-erp-service
   registry:
-    address: zookeeper://192.168.36.128:2181
+    address: zookeeper://192.168.36.134:2181
   consumer:
     check: false
   config-center:

@@ -5,7 +5,7 @@ import com.sky.domain.Producer;
 
 /**
  * @author sky
- * @create 2021-06-05 21:26
+ * @create 2020-11-10 15:28
  */
 public interface ProducerMapper extends BaseMapper<Producer> {
 }

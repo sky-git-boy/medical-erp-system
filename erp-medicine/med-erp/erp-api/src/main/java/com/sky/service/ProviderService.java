@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @author sky
- * @create 2021-06-14 21:48
+ * @create 2021-6-11 22:46
  */
 public interface ProviderService {
 
@@ -20,7 +20,7 @@ public interface ProviderService {
     /**
      * 根据ID查询
      */
-    Provider getOne(Long providerId);
+    Provider getOne(Long ProviderId);
 
     /**
      * 添加
@@ -41,6 +41,4 @@ public interface ProviderService {
      * 查询所有可用供应商
      */
     List<Provider> selectAllProvider();
-
 }
-

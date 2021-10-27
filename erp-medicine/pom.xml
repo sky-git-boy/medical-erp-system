@@ -8,8 +8,6 @@
         <module>med-commons</module>
         <module>med-system</module>
         <module>med-erp</module>
-        <module>med-doctor</module>
-        <module>med-statistics</module>
     </modules>
     <!--依赖springboot-->
     <parent>

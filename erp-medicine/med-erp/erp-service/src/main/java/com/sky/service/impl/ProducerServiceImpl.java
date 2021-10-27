@@ -19,10 +19,10 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * methods = {@Method(name = "addProducer",retries = 0)
+ * 代表当前类里面的addProducer这个主就去只调一次，不重试
  * @author sky
- * @create 2021-06-05 21:26
- * methods = {@Method(name = "addProducer",retries = 0)}
- * 代表当前类里面的 addProducer 这个主就去/只调一次，不重试
+ * @create 2020-11-10 15:28
  */
 @Service(methods = {@Method(name = "addProducer", retries = 0)})
 public class ProducerServiceImpl implements ProducerService {
@@ -34,12 +34,15 @@ public class ProducerServiceImpl implements ProducerService {
     public DataGridView listProducerPage(ProducerDto producerDto) {
         Page<Producer> page = new Page<>(producerDto.getPageNum(), producerDto.getPageSize());
         QueryWrapper<Producer> qw = new QueryWrapper<>();
-        qw.like(StringUtils.isNotBlank(producerDto.getProducerName()), Producer.COL_PRODUCER_NAME, producerDto.getProducerName());
-        qw.like(StringUtils.isNotBlank(producerDto.getKeywords()), Producer.COL_KEYWORDS, producerDto.getKeywords());
-        qw.eq(StringUtils.isNotBlank(producerDto.getProducerTel()), Producer.COL_PRODUCER_TEL, producerDto.getProducerTel());
-        qw.eq(StringUtils.isNotBlank(producerDto.getStatus()), Producer.COL_STATUS, producerDto.getStatus());
-        qw.ge(producerDto.getBeginTime() != null, Producer.COL_CREATE_TIME, producerDto.getBeginTime());
-        qw.le(producerDto.getEndTime() != null, Producer.COL_CREATE_TIME, producerDto.getEndTime());
+        //查询条件
+        qw.like(StringUtils.isNotBlank(producerDto.getProducerName()), Producer.COL_PRODUCER_NAME,producerDto.getProducerName());
+        qw.like(StringUtils.isNotBlank(producerDto.getKeywords()), Producer.COL_KEYWORDS,producerDto.getKeywords());
+        qw.like(StringUtils.isNotBlank(producerDto.getProducerTel()), Producer.COL_PRODUCER_TEL,producerDto.getProducerTel());
+        qw.eq(StringUtils.isNotBlank(producerDto.getStatus()), Producer.COL_STATUS,producerDto.getStatus());
+
+        qw.ge(producerDto.getBeginTime()!=null, Producer.COL_CREATE_TIME,producerDto.getBeginTime());
+        qw.le(producerDto.getEndTime()!=null, Producer.COL_CREATE_TIME,producerDto.getEndTime());
+
         this.producerMapper.selectPage(page, qw);
         return new DataGridView(page.getTotal(), page.getRecords());
     }
@@ -53,8 +56,9 @@ public class ProducerServiceImpl implements ProducerService {
     public int addProducer(ProducerDto producerDto) {
         Producer producer = new Producer();
         BeanUtil.copyProperties(producerDto, producer);
-        producer.setCreateTime(DateUtil.date());
+        //设置创建人
         producer.setCreateBy(producerDto.getSimpleUser().getUserName());
+        producer.setCreateTime(DateUtil.date());
         return this.producerMapper.insert(producer);
     }
 
@@ -62,22 +66,23 @@ public class ProducerServiceImpl implements ProducerService {
     public int updateProducer(ProducerDto producerDto) {
         Producer producer = new Producer();
         BeanUtil.copyProperties(producerDto, producer);
+        // 设置修改人
         producer.setUpdateBy(producerDto.getSimpleUser().getUserName());
         return this.producerMapper.updateById(producer);
     }
 
     @Override
     public int deleteProducerByIds(Long[] producerIds) {
-        List<Long> ids = Arrays.asList(producerIds);
-        if (ids.size() > 0) {
+        List<Long> ids= Arrays.asList(producerIds);
+        if(ids.size()>0){
             return this.producerMapper.deleteBatchIds(ids);
         }
-        return 0;
+        return -1;
     }
 
     @Override
     public List<Producer> selectAllProducer() {
-        QueryWrapper<Producer> qw = new QueryWrapper<>();
+        QueryWrapper<Producer> qw=new QueryWrapper<>();
         qw.eq(Producer.COL_STATUS, Constants.STATUS_TRUE);
         return this.producerMapper.selectList(qw);
     }

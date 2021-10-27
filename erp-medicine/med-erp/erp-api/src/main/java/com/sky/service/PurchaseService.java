@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * @author sky
- * @create 2021-06-15 8:43
+ * @create 2020-11-12 16:39
  */
 public interface PurchaseService {
 
@@ -21,12 +21,17 @@ public interface PurchaseService {
     DataGridView listPurchasePage(PurchaseDto purchaseDto);
 
     /**
-     * 根据采购单据号查询单据信息
+     * 根据 purchaseId 查询一个单据
      */
     Purchase getPurchaseById(String purchaseId);
 
     /**
-     * 提交 审核
+     * 根据 purchaseId 查询一个采购信息详情
+     */
+    List<PurchaseItem> getPurchaseItemById(String purchaseId);
+
+    /**
+     * 提交单据
      */
     int doAudit(String purchaseId, SimpleUser simpleUser);
 
@@ -43,15 +48,15 @@ public interface PurchaseService {
     /**
      * 审核不通过
      */
-    int auditNoPass(String purchaseId, String auditMsg);
+    int auditNoPass(String purchaseId, String examine);
 
     /**
-     * 根据ID查询一个采购信息详情
+     * 分页查询所有待审核的入库信息
      */
-    List<PurchaseItem> getPurchaseItemById(String purchaseId);
+    DataGridView listPurchasePendingForPage(PurchaseDto purchaseDto);
 
     /**
-     * 暂存采购单数据和详情
+     * 暂存采购单数据
      */
     int addPurchaseAndItem(PurchaseFormDto purchaseFormDto);
 
@@ -61,8 +66,7 @@ public interface PurchaseService {
     int addPurchaseAndItemToAudit(PurchaseFormDto purchaseFormDto);
 
     /**
-     * 保存并提交审核采购单数据和详情
+     * 入库
      */
     int doInventory(String purchaseId, SimpleUser currentSimpleUser);
-
 }

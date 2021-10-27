@@ -19,11 +19,10 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * methods = {@Method(name = "Medicines",retries = 0)
- * 代表当前类里面的Medicines这个主就去只调一次，不重试
- *
+ * methods = {@Method(name = "addProvider",retries = 0)
+ * 代表当前类里面的addProvider这个主就去只调一次，不重试
  * @author sky
- * @create 2021-06-14 21:48
+ * @create 2021-6-11 22:46
  */
 @Service(methods = {@Method(name = "addProvider", retries = 0)})
 public class ProviderServiceImpl implements ProviderService {
@@ -35,13 +34,16 @@ public class ProviderServiceImpl implements ProviderService {
     public DataGridView listProviderPage(ProviderDto providerDto) {
         Page<Provider> page = new Page<>(providerDto.getPageNum(), providerDto.getPageSize());
         QueryWrapper<Provider> qw = new QueryWrapper<>();
-        qw.like(StringUtils.isNotBlank(providerDto.getProviderName()), Provider.COL_PROVIDER_NAME, providerDto.getProviderName());
-        qw.like(StringUtils.isNotBlank(providerDto.getContactName()), Provider.COL_CONTACT_NAME, providerDto.getContactName());
-        // (tel like ? or mobile like ?)
-        // 对联系人手机或者电话做判断
-        qw.and(StringUtils.isNotBlank(providerDto.getContactTel()), providerQueryWrapper -> providerQueryWrapper.like(Provider.COL_CONTACT_TEL, providerDto.getContactTel())
-                .or().like(Provider.COL_CONTACT_MOBILE, providerDto.getContactTel()));
-        qw.eq(StringUtils.isNotBlank(providerDto.getStatus()), Provider.COL_STATUS, providerDto.getStatus());
+        //查询条件
+        qw.like(StringUtils.isNotBlank(providerDto.getProviderName()), Provider.COL_PROVIDER_NAME,providerDto.getProviderName());
+        qw.like(StringUtils.isNotBlank(providerDto.getContactName()), Provider.COL_CONTACT_NAME,providerDto.getContactName());
+
+        //联系人手机和联系人电话 (tel like ? or mobile like ?)
+        qw.and(StringUtils.isNotBlank(providerDto.getContactTel()), providerQueryWrapper -> providerQueryWrapper.like(Provider.COL_CONTACT_TEL,providerDto.getContactTel())
+                .or().like(Provider.COL_CONTACT_MOBILE,providerDto.getContactTel()));
+
+        qw.eq(StringUtils.isNotBlank(providerDto.getStatus()), Provider.COL_STATUS,providerDto.getStatus());
+
         this.providerMapper.selectPage(page, qw);
         return new DataGridView(page.getTotal(), page.getRecords());
     }
@@ -53,8 +55,8 @@ public class ProviderServiceImpl implements ProviderService {
 
     @Override
     public int addProvider(ProviderDto providerDto) {
-        Provider provider = new Provider();
-        BeanUtil.copyProperties(providerDto, provider);
+        Provider provider=new Provider();
+        BeanUtil.copyProperties(providerDto,provider);
         provider.setCreateTime(DateUtil.date());
         provider.setCreateBy(providerDto.getSimpleUser().getUserName());
         return this.providerMapper.insert(provider);
@@ -62,26 +64,25 @@ public class ProviderServiceImpl implements ProviderService {
 
     @Override
     public int updateProvider(ProviderDto providerDto) {
-        Provider provider = new Provider();
-        BeanUtil.copyProperties(providerDto, provider);
+        Provider provider=new Provider();
+        BeanUtil.copyProperties(providerDto,provider);
         provider.setUpdateBy(providerDto.getSimpleUser().getUserName());
         return this.providerMapper.updateById(provider);
     }
 
     @Override
     public int deleteProviderByIds(Long[] providerIds) {
-        List<Long> ids = Arrays.asList(providerIds);
-        if (ids.size() > 0) {
+        List<Long> ids= Arrays.asList(providerIds);
+        if(ids.size()>0){
             return this.providerMapper.deleteBatchIds(ids);
         }
-        return 0;
+        return -1;
     }
 
     @Override
     public List<Provider> selectAllProvider() {
-        QueryWrapper<Provider> qw = new QueryWrapper<>();
+        QueryWrapper<Provider> qw=new QueryWrapper<>();
         qw.eq(Provider.COL_STATUS, Constants.STATUS_TRUE);
         return this.providerMapper.selectList(qw);
     }
-
 }

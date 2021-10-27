@@ -1,12 +1,8 @@
 package com.sky.dto;
 
-import com.sky.domain.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -14,19 +10,13 @@ import java.math.BigDecimal;
 
 /**
  * @author sky
- * @create 2021-06-14 20:33
+ * @create 2021-6-11 16:34
  * 药品信息表
  */
-@ApiModel(value = "com-sky-dto-MedicinesSto")
+@ApiModel(value = "com-sky-dto-MedicinesDto")
 @Data
-@EqualsAndHashCode(callSuper = true)
-@AllArgsConstructor
-@NoArgsConstructor
 public class MedicinesDto extends BaseDto {
-    /**
-     * 药品ID
-     */
-    @ApiModelProperty(value = "药品ID")
+    @ApiModelProperty(value = "")
     private Long medicinesId;
 
     /**
@@ -93,7 +83,7 @@ public class MedicinesDto extends BaseDto {
     /**
      * 药品状态0正常0停用 sys_dict_data表 sys_normal_disable
      */
-    @NotBlank(message = "药品状态0不能为空")
+    @NotBlank(message = "状态不能为空")
     @ApiModelProperty(value = "药品状态0正常0停用 sys_dict_data表 sys_normal_disable")
     private String status;
 

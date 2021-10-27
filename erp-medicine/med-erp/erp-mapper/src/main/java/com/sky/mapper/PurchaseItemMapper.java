@@ -5,7 +5,7 @@ import com.sky.domain.PurchaseItem;
 
 /**
  * @author sky
- * @create 2021-06-15 8:55
+ * @create 2020-11-12 17:28
  */
 public interface PurchaseItemMapper extends BaseMapper<PurchaseItem> {
 }

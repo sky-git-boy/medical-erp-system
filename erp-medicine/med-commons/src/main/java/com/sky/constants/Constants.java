@@ -145,5 +145,5 @@ public interface Constants {
     /**
      * ID 前缀
      */
-    String ID_PROFIX_CG="CG";
+    String ID_PREFIX_CG="CG";
 }

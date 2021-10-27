@@ -1,27 +1,21 @@
 package com.sky.dto;
 
-import com.sky.domain.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 
 /**
  * @author sky
- * @create 2021-06-14 21:48
+ * @create 2021-6-11 22:46
  * 供应商信息表
  */
 @ApiModel(value = "com-sky-dto-ProviderDto")
 @Data
 @EqualsAndHashCode(callSuper = true)
-@AllArgsConstructor
-@NoArgsConstructor
 public class ProviderDto extends BaseDto {
-
     /**
      * 供应商id
      */

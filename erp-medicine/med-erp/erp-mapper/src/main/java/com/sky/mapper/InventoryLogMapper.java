@@ -5,7 +5,7 @@ import com.sky.domain.InventoryLog;
 
 /**
  * @author sky
- * @create 2021-06-16 10:18
+ * @create 2020-11-13 20:56
  */
 public interface InventoryLogMapper extends BaseMapper<InventoryLog> {
 }
